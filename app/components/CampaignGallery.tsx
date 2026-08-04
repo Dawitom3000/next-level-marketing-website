@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { assetPath } from "../lib/asset-path";
 
 const galleryPhotos = [
@@ -21,55 +21,15 @@ const galleryPhotos = [
 
 export function CampaignGallery() {
   const railRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const centerSlide = useCallback((index: number) => {
-    const rail = railRef.current;
-    const slide = rail?.children[index] as HTMLElement | undefined;
-    if (!rail || !slide) return;
-    const left = slide.offsetLeft - (rail.clientWidth - slide.clientWidth) / 2;
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    rail.scrollTo({ left, behavior: reduceMotion ? "auto" : "smooth" });
-    setActiveIndex(index);
-  }, []);
-
-  useEffect(() => {
-    const rail = railRef.current;
-    if (!rail) return;
-    let frame = 0;
-
-    const updateActiveSlide = () => {
-      const center = rail.scrollLeft + rail.clientWidth / 2;
-      let closestIndex = 0;
-      let closestDistance = Number.POSITIVE_INFINITY;
-      Array.from(rail.children).forEach((child, index) => {
-        const slide = child as HTMLElement;
-        const distance = Math.abs(slide.offsetLeft + slide.clientWidth / 2 - center);
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestIndex = index;
-        }
-      });
-      setActiveIndex(closestIndex);
-    };
-
-    const onScroll = () => {
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(updateActiveSlide);
-    };
-
-    updateActiveSlide();
-    rail.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      cancelAnimationFrame(frame);
-      rail.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, []);
 
   function move(direction: number) {
-    centerSlide(Math.max(0, Math.min(galleryPhotos.length - 1, activeIndex + direction)));
+    const rail = railRef.current;
+    if (!rail) return;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    rail.scrollBy({
+      left: direction * Math.min(rail.clientWidth * 0.82, 920),
+      behavior: reduceMotion ? "auto" : "smooth",
+    });
   }
 
   return (
@@ -83,10 +43,8 @@ export function CampaignGallery() {
       </div>
       <div className="gallery-rail" ref={railRef} tabIndex={0} aria-label="Next Level campaign and production photographs">
         {galleryPhotos.map((photo, index) => {
-          const distance = Math.abs(index - activeIndex);
-          const position = index === activeIndex ? "is-active" : index < activeIndex ? "is-before" : "is-after";
-          return <figure className={`gallery-slide ${position}${distance === 1 ? " is-adjacent" : " is-distant"}`} aria-current={index === activeIndex ? "true" : undefined} key={photo.src}>
-            <div className="gallery-image"><img src={assetPath(photo.src)} alt={photo.alt} loading="lazy" /></div>
+          return <figure className="gallery-slide" key={photo.src}>
+            <div className="gallery-image"><img src={assetPath(photo.src)} alt={photo.alt} loading={index < 2 ? "eager" : "lazy"} fetchPriority={index === 0 ? "high" : "auto"} /></div>
             <figcaption><span>{String(index + 1).padStart(2, "0")} / {String(galleryPhotos.length).padStart(2, "0")}</span><strong>{photo.label}</strong></figcaption>
           </figure>;
         })}

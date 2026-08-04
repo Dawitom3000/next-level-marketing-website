@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { assetPath } from "../lib/asset-path";
 
 const galleryPhotos = [
   { src: "/images/haile-production-behind-scenes.jpg", alt: "Coach Carlos coordinating an office interview production", label: "Behind the production" },
@@ -85,7 +86,7 @@ export function CampaignGallery() {
           const distance = Math.abs(index - activeIndex);
           const position = index === activeIndex ? "is-active" : index < activeIndex ? "is-before" : "is-after";
           return <figure className={`gallery-slide ${position}${distance === 1 ? " is-adjacent" : " is-distant"}`} aria-current={index === activeIndex ? "true" : undefined} key={photo.src}>
-            <div className="gallery-image"><img src={photo.src} alt={photo.alt} loading="lazy" /></div>
+            <div className="gallery-image"><img src={assetPath(photo.src)} alt={photo.alt} loading="lazy" /></div>
             <figcaption><span>{String(index + 1).padStart(2, "0")} / {String(galleryPhotos.length).padStart(2, "0")}</span><strong>{photo.label}</strong></figcaption>
           </figure>;
         })}

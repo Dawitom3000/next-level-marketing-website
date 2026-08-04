@@ -3,6 +3,7 @@ import { Footer, Header, PageCta, ServiceGrid } from "./components/SiteChrome";
 import { CampaignGallery } from "./components/CampaignGallery";
 import { LogoCarousel } from "./components/LogoCarousel";
 import { experienceLogos } from "./data/experience";
+import { assetPath } from "./lib/asset-path";
 
 export default function Home() {
   return (
@@ -11,8 +12,8 @@ export default function Home() {
       <main>
         <section className="hero hero-video section-dark">
           <div className="hero-media" aria-hidden="true">
-            <video autoPlay muted loop playsInline preload="metadata" poster="/images/next-level-hero-poster.jpg" tabIndex={-1}>
-              <source src="/videos/next-level-hero-reel.mp4" type="video/mp4" />
+            <video autoPlay muted loop playsInline preload="metadata" poster={assetPath("/images/next-level-hero-poster.jpg")} tabIndex={-1}>
+              <source src={assetPath("/videos/next-level-hero-reel.mp4")} type="video/mp4" />
             </video>
           </div>
           <div className="hero-grid shell">
@@ -62,15 +63,15 @@ export default function Home() {
 
           <div className="case-grid">
             <Link href="/work#and1" className="case-card case-large">
-              <div className="case-image case-logo-art case-logo-and1"><img src="/logos/and1.png" alt="AND1" /></div>
+              <div className="case-image case-logo-art case-logo-and1"><img src={assetPath("/logos/and1.png")} alt="AND1" /></div>
               <div className="case-overlay"><span>International sports marketing · 2008 & 2010</span><h3>AND1<br />Ethiopia Tours</h3><b>Full market execution ↗</b></div>
             </Link>
             <Link href="/work#coach-carlos" className="case-card">
-              <div className="case-image"><img src="/images/coach-carlos-show.jpg" alt="Coach Carlos introducing The Coach Carlos Show" /></div>
+              <div className="case-image"><img src={assetPath("/images/coach-carlos-show.jpg")} alt="Coach Carlos introducing The Coach Carlos Show" /></div>
               <div className="case-overlay"><span>Media & production · Nahoo TV</span><h3>The Coach<br />Carlos Show</h3><b>Culture on screen ↗</b></div>
             </Link>
             <Link href="/work#documentary" className="case-card case-photo-contain">
-              <div className="case-image"><img src="/images/us-embassy-documentary-meeting.jpg" alt="Next Level representatives following a meeting at the U.S. Embassy" /></div>
+              <div className="case-image"><img src={assetPath("/images/us-embassy-documentary-meeting.jpg")} alt="Next Level representatives following a meeting at the U.S. Embassy" /></div>
               <div className="case-overlay"><span>U.S. Embassy engagement · 2025</span><h3>Documentary<br />& Proposals</h3><b>Recognition secured ↗</b></div>
             </Link>
           </div>

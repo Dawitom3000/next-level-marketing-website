@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Footer, Header, InnerHero, PageCta } from "../components/SiteChrome";
+import { assetPath } from "../lib/asset-path";
 
 export const metadata: Metadata = { title: "About", description: "The story, leadership, and operating principles behind Next Level Marketing & Communications." };
 
@@ -20,7 +21,7 @@ export default function AboutPage() {
 
     <section className="section section-sand">
       <div className="shell leadership-grid">
-        <div className="leadership-image"><img src="/images/production-set.jpg" alt="Next Level production work in progress" /></div>
+        <div className="leadership-image"><img src={assetPath("/images/production-set.jpg")} alt="Next Level production work in progress" /></div>
         <div>
           <p className="eyebrow">Leadership</p>
           <div className="person"><span>Founder</span><h3>Carlos Thornton</h3><p>After a professional sports career spanning American football and basketball in Israel, Carlos founded Next Level and shaped its reputation through sports marketing, youth development, media production, event promotion, and international relationship-building. His wider work in Ethiopia has used sport as a platform for education, opportunity, culture, and community connection for roughly two decades.</p></div>

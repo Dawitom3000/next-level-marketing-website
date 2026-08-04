@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { assetPath } from "../lib/asset-path";
 
 const services = [
   ["01", "Marketing strategy", "Audience insight, positioning, campaign planning, and market-entry thinking."],
@@ -15,7 +16,7 @@ const socialProfiles = [
 ];
 
 export function SocialLinks() {
-  return <div className="social-links">{socialProfiles.map((profile) => <a className="social-link" href={profile.href} target="_blank" rel="noreferrer" aria-label={`Open Next Level on ${profile.name}`} title={profile.name} key={profile.name}><img src={profile.icon} alt="" aria-hidden="true" /></a>)}</div>;
+  return <div className="social-links">{socialProfiles.map((profile) => <a className="social-link" href={profile.href} target="_blank" rel="noreferrer" aria-label={`Open Next Level on ${profile.name}`} title={profile.name} key={profile.name}><img src={assetPath(profile.icon)} alt="" aria-hidden="true" /></a>)}</div>;
 }
 
 export function Header() {

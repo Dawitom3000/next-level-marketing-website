@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Footer, Header, PageCta, ServiceGrid } from "./components/SiteChrome";
-import { LogoWall } from "./components/LogoWall";
+import { CampaignGallery } from "./components/CampaignGallery";
+import { LogoCarousel } from "./components/LogoCarousel";
 import { experienceLogos } from "./data/experience";
 
 export default function Home() {
@@ -8,106 +9,91 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <section className="hero section-dark">
+        <section className="hero hero-video section-dark">
+          <div className="hero-media" aria-hidden="true">
+            <video autoPlay muted loop playsInline preload="metadata" poster="/images/next-level-hero-poster.jpg" tabIndex={-1}>
+              <source src="/videos/next-level-hero-reel.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div className="hero-grid shell">
             <div className="hero-copy reveal">
-              <p className="eyebrow light">Addis Ababa · Ethiopia · Since 2006</p>
-              <h1>Reach the right audience. <span>Move the market.</span></h1>
+              <p className="eyebrow light"><i className="live-dot" /> Addis Ababa · Ethiopia · Since 2006</p>
+              <h1>We move brands <em>through culture.</em></h1>
               <p className="hero-lede">
-                Strategy, communication, promotion, production, events, and
-                distribution—delivered by a team with more than 20 years of
-                Ethiopian market experience.
+                Strategy, communication, promotion, production, events, and distribution—connected by more than 20 years of real Ethiopian market experience.
               </p>
               <div className="button-row">
-                <Link className="button button-primary" href="/contact">Start a project <span>↗</span></Link>
-                <Link className="button button-ghost" href="/work">Explore our work</Link>
+                <Link className="button button-primary" href="/work">See what we move <span>↗</span></Link>
+                <Link className="button button-ghost" href="/contact">Start a project</Link>
               </div>
             </div>
 
-            <div className="hero-visual reveal delay-1">
-              <img src="/images/summer-camp.jpg" alt="Coach Carlos and guests at a summer camp event" />
-              <div className="hero-stamp">
-                <strong>20+</strong>
-                <span>years in market</span>
-              </div>
-              <div className="hero-caption">Campaigns that connect brands, culture, and community.</div>
+            <div className="hero-side reveal delay-1">
+              <span className="hero-side-kicker">20+ years in market</span>
+              <p>Local intelligence and international ambition—built through real campaigns, partnerships, productions, events, and distribution.</p>
+              <div className="hero-disciplines"><span>Strategy</span><span>Communications</span><span>Activation</span><span>Distribution</span></div>
+              <small>Footage from the Next Level archive</small>
             </div>
           </div>
-          <div className="marquee" aria-label="Core capabilities">
-            <div>MARKETING STRATEGY <i>•</i> BRAND ACTIVATION <i>•</i> COMMUNICATIONS <i>•</i> DISTRIBUTION <i>•</i> SPORTS MARKETING <i>•</i> MEDIA PRODUCTION <i>•</i> EVENTS <i>•</i></div>
+          <div className="marquee logo-marquee">
+            <LogoCarousel logos={experienceLogos} compact />
           </div>
         </section>
 
-        <section className="metrics shell" aria-label="Company results">
+        <section className="metrics" aria-label="Company results"><div className="shell metrics-inner">
           <div><strong>20+</strong><span>Years of experience</span></div>
           <div><strong>500+</strong><span>Annual camp participants</span></div>
-          <div><strong>4</strong><span>Distribution cities</span></div>
+          <div><strong>10+</strong><span>Years organizing Ethio Ballers camps</span></div>
           <div><strong>2</strong><span>AND1 Ethiopia tours</span></div>
+        </div></section>
+
+        <section className="section shell manifesto">
+          <p className="eyebrow">Our point of view</p>
+          <p className="manifesto-copy">Attention is easy to buy. <span>Trust is earned in the market.</span> We combine local intelligence with international ambition to turn visibility into action.</p>
+          <Link className="text-link" href="/about">The Next Level story <span>↗</span></Link>
         </section>
 
-        <section className="section shell intro-grid">
-          <div>
-            <p className="eyebrow">What we do</p>
-            <h2>Local intelligence.<br />International ambition.</h2>
-          </div>
-          <div className="intro-copy">
-            <p>
-              Next Level helps brands and institutions turn attention into
-              action. We understand how Ethiopian audiences move, what builds
-              trust, and what it takes to execute beyond the presentation deck.
-            </p>
-            <Link className="text-link" href="/about">Meet Next Level <span>→</span></Link>
-          </div>
-        </section>
-
-        <section className="section section-sand">
+        <section className="section work-showcase section-dark">
           <div className="shell">
-            <div className="section-heading">
-              <div><p className="eyebrow">Capabilities</p><h2>Built to take work from idea to audience.</h2></div>
-              <p>One connected team for strategy, communications, activation, production, and field execution.</p>
-            </div>
-            <ServiceGrid compact />
-            <Link className="button button-dark service-button" href="/services">View all services <span>↗</span></Link>
-          </div>
-        </section>
-
-        <section className="section shell">
           <div className="section-heading work-heading">
-            <div><p className="eyebrow">Selected work</p><h2>Proof, not promises.</h2></div>
-            <Link className="text-link" href="/work">View all work <span>→</span></Link>
+            <div><p className="eyebrow light">Selected work</p><h2>Proof moves<br />faster than promises.</h2></div>
+            <Link className="text-link light-link" href="/work">View all work <span>↗</span></Link>
           </div>
 
           <div className="case-grid">
             <Link href="/work#and1" className="case-card case-large">
-              <div className="case-image"><img src="/images/summer-camp.jpg" alt="Sports event organized by Next Level" /></div>
-              <div className="case-meta"><span>International sports marketing</span><span>2008 & 2010</span></div>
-              <h3>AND1 Ethiopia Tours</h3>
-              <p>Full local execution—from promotion and sponsorship to media, venues, and logistics.</p>
+              <div className="case-image case-logo-art case-logo-and1"><img src="/logos/and1.png" alt="AND1" /></div>
+              <div className="case-overlay"><span>International sports marketing · 2008 & 2010</span><h3>AND1<br />Ethiopia Tours</h3><b>Full market execution ↗</b></div>
             </Link>
             <Link href="/work#coach-carlos" className="case-card">
               <div className="case-image"><img src="/images/coach-carlos-show.jpg" alt="Coach Carlos introducing The Coach Carlos Show" /></div>
-              <div className="case-meta"><span>Media & production</span><span>Nahoo TV</span></div>
-              <h3>The Coach Carlos Show</h3>
-              <p>A broadcast platform bringing sports, culture, and prominent voices together.</p>
+              <div className="case-overlay"><span>Media & production · Nahoo TV</span><h3>The Coach<br />Carlos Show</h3><b>Culture on screen ↗</b></div>
             </Link>
-            <Link href="/work#documentary" className="case-card">
-              <div className="case-image"><img src="/images/haile-interview.jpg" alt="Coach Carlos interviewing Haile Gebrselassie" /></div>
-              <div className="case-meta"><span>Documentary & diplomacy</span><span>2025</span></div>
-              <h3>20 Years of Excellence</h3>
-              <p>A self-funded basketball documentary built to earn international recognition.</p>
+            <Link href="/work#documentary" className="case-card case-photo-contain">
+              <div className="case-image"><img src="/images/us-embassy-documentary-meeting.jpg" alt="Next Level representatives following a meeting at the U.S. Embassy" /></div>
+              <div className="case-overlay"><span>U.S. Embassy engagement · 2025</span><h3>Documentary<br />& Proposals</h3><b>Recognition secured ↗</b></div>
             </Link>
+          </div>
           </div>
         </section>
 
-        <section className="section experience section-dark">
+        <section className="section section-sand capability-home">
           <div className="shell">
-            <div className="section-heading experience-heading">
-              <div><p className="eyebrow light">Selected experience</p><h2>Brands know the company we keep.</h2></div>
-              <Link className="text-link light-link" href="/experience">View full experience <span>→</span></Link>
+            <div className="section-heading">
+              <div><p className="eyebrow">Connected capabilities</p><h2>One team. From signal to street.</h2></div>
+              <p>We connect strategic thinking with the communication, partnerships, production, events, and distribution needed to make work land.</p>
             </div>
-            <LogoWall logos={experienceLogos.filter((logo) => logo.featured).slice(0, 12)} />
-            <p className="brand-note">Clients, sponsors, distribution relationships, media partners, and institutional collaborators. Engagement scope varied by project.</p>
+            <ServiceGrid compact />
+            <Link className="button button-dark service-button" href="/services">Explore our capabilities <span>↗</span></Link>
           </div>
+        </section>
+
+        <section className="section campaign-archive section-dark">
+          <div className="shell gallery-heading">
+            <div><p className="eyebrow light">From the archive</p><h2>The people and moments behind the work.</h2></div>
+            <p>Production, interviews, guests, and relationships captured across the Next Level story.</p>
+          </div>
+          <CampaignGallery />
         </section>
 
         <PageCta />

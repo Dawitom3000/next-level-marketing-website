@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Footer, Header, PageCta, ServiceGrid } from "./components/SiteChrome";
+import { LogoWall } from "./components/LogoWall";
+import { experienceLogos } from "./data/experience";
 
 export default function Home() {
   return (
@@ -99,11 +101,12 @@ export default function Home() {
 
         <section className="section experience section-dark">
           <div className="shell">
-            <p className="eyebrow light">Selected experience</p>
-            <div className="brand-grid" aria-label="Brands and organizations we have worked with">
-              {["Coca-Cola", "Pepsi", "Sprite", "Ambo", "Kaldi’s Coffee", "Tasties", "SUN Chips Ethiopia", "Cheetos", "Lifan Motors", "Commercial Bank of Ethiopia", "AND1", "U.S. Embassy", "Ethiopian Lottery Service", "Metropolitan Real Estate", "Tripolla"].map((brand) => <span key={brand}>{brand}</span>)}
+            <div className="section-heading experience-heading">
+              <div><p className="eyebrow light">Selected experience</p><h2>Brands know the company we keep.</h2></div>
+              <Link className="text-link light-link" href="/experience">View full experience <span>→</span></Link>
             </div>
-            <p className="brand-note">A selection of clients, sponsors, distribution partners, and institutional collaborators.</p>
+            <LogoWall logos={experienceLogos.filter((logo) => logo.featured).slice(0, 12)} />
+            <p className="brand-note">Clients, sponsors, distribution relationships, media partners, and institutional collaborators. Engagement scope varied by project.</p>
           </div>
         </section>
 

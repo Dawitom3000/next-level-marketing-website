@@ -21,6 +21,7 @@ export function Header() {
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
           <Link href="/work">Work</Link>
+          <Link href="/experience">Experience</Link>
           <Link className="nav-cta" href="/contact">Start a project <span>↗</span></Link>
         </nav>
         <details className="mobile-menu">
@@ -29,6 +30,7 @@ export function Header() {
             <Link href="/about">About</Link>
             <Link href="/services">Services</Link>
             <Link href="/work">Work</Link>
+            <Link href="/experience">Experience</Link>
             <Link href="/contact">Start a project</Link>
           </nav>
         </details>
@@ -45,7 +47,7 @@ export function Footer() {
           <Link className="logo logo-footer" href="/"><span className="logo-mark">NL</span><span>Next Level<small>Marketing & Communications</small></span></Link>
           <p>Connecting ambitious organizations with the audiences that matter.</p>
         </div>
-        <div><h4>Navigate</h4><Link href="/about">About</Link><Link href="/services">Services</Link><Link href="/work">Work</Link><Link href="/contact">Contact</Link></div>
+        <div><h4>Navigate</h4><Link href="/about">About</Link><Link href="/services">Services</Link><Link href="/work">Work</Link><Link href="/experience">Experience</Link><Link href="/contact">Contact</Link></div>
         <div><h4>Talk to us</h4><a href="tel:+251911998000">+251 911 998 000</a><a href="tel:+251970437830">+251 970 437 830</a><a href="mailto:carlos2thornton@yahoo.com">carlos2thornton@yahoo.com</a><a href="mailto:felekedawit11@gmail.com">felekedawit11@gmail.com</a></div>
         <div><h4>Follow</h4><a href="https://www.instagram.com/nextlevelmarkating/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.tiktok.com/@next.level.market10" target="_blank" rel="noreferrer">TikTok ↗</a><span>Addis Ababa, Ethiopia</span></div>
       </div>

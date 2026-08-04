@@ -89,9 +89,22 @@ p { line-height: 1.7; }
 .case-card h3 { margin-bottom: 8px; font-size: 32px; }
 .case-card p { max-width: 540px; color: var(--muted); font-size: 14px; }
 .experience { border-bottom: 1px solid #343531; }
-.brand-grid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid #343531; border-left: 1px solid #343531; }
-.brand-grid span { min-height: 96px; display: grid; place-items: center; padding: 20px; border-right: 1px solid #343531; border-bottom: 1px solid #343531; color: #d4d2ca; font: 700 18px var(--font-display); text-align: center; }
+.experience-heading h2 { max-width: 740px; margin-bottom: 0; }
+.light-link { color: var(--ivory); border-color: #55564f; }
+.logo-wall { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: #d8d4ca; border: 1px solid #d8d4ca; }
+.logo-card { min-width: 0; background: #fff; color: var(--ink); }
+.logo-artwork { height: 176px; display: grid; place-items: center; padding: 34px; background: #fff; }
+.logo-artwork img { width: auto; max-width: 100%; height: 100%; max-height: 108px; object-fit: contain; }
+.logo-card-copy { min-height: 88px; padding: 18px 20px; border-top: 1px solid #e6e2d9; }
+.logo-card-copy strong { display: block; font: 700 17px var(--font-display); letter-spacing: -.02em; }
+.logo-card-copy span { display: block; margin-top: 7px; color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .brand-note { margin: 24px 0 0; color: #888984; font-size: 12px; }
+.logo-library { padding-top: 96px; }
+.artwork-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 90px; }
+.artwork-grid h2 { max-width: 560px; }
+.artwork-intro { max-width: 650px; margin-bottom: 34px; color: var(--muted); font-size: 17px; }
+.artwork-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.artwork-list span { padding: 12px 15px; border: 1px solid rgba(16,17,15,.2); background: rgba(247,243,234,.45); font-size: 12px; font-weight: 750; }
 .page-cta { padding: 96px 0; }
 .page-cta-grid { display: grid; grid-template-columns: .6fr 2fr auto; align-items: center; gap: 45px; }
 .page-cta h2 { margin: 0; font-size: clamp(42px, 5vw, 72px); }
@@ -187,7 +200,8 @@ p { line-height: 1.7; }
   .case-grid { grid-template-columns: 1fr; }
   .case-large { grid-row: auto; }
   .case-large .case-image img { height: 500px; }
-  .brand-grid { grid-template-columns: repeat(2,1fr); }
+  .logo-wall { grid-template-columns: repeat(2,1fr); }
+  .artwork-grid { grid-template-columns: 1fr; gap: 40px; }
   .page-cta-grid { grid-template-columns: 1fr; }
   .page-cta .eyebrow { margin-bottom: 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -212,7 +226,8 @@ p { line-height: 1.7; }
   .intro-copy p { font-size: 18px; }
   .service-grid,.values-grid,.process-grid { grid-template-columns: 1fr; }
   .service-card { min-height: 235px; }
-  .brand-grid { grid-template-columns: 1fr; }
+  .logo-wall { grid-template-columns: 1fr; }
+  .logo-artwork { height: 158px; }
   .case-large .case-image img,.case-image img { height: 420px; }
   .inner-hero { padding: 90px 0; }
   .inner-hero h1,.contact-page h1 { font-size: 56px; }

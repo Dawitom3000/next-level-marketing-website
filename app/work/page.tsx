@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Footer, Header, InnerHero, PageCta } from "../components/SiteChrome";
 import { assetPath } from "../lib/asset-path";
+import { campaignProjects } from "../data/campaigns";
 
 export const metadata: Metadata = { title: "Selected Work", description: "Case studies spanning sports marketing, television, documentary production, and product distribution." };
 
@@ -85,6 +86,29 @@ export default function WorkPage() {
   return <><Header /><main>
     <InnerHero eyebrow="Selected work" title="Work that earns attention—and uses it well." intro="A selection of projects across sports, media, communications, events, and distribution." />
     <section className="section shell work-list">{cases.map((item, index) => <article className="work-detail" id={item.id} key={item.id}><div className="work-number">0{index + 1}</div><div className={`work-photo ${item.imageClass ?? ""}`}><img src={assetPath(item.image)} alt={item.title} /><strong>{item.proof}</strong></div><div className="work-copy"><p className="eyebrow">{item.tag}</p><h2>{item.title}</h2><p className="work-summary">{item.summary}</p><div className="work-story"><section><h4>Context</h4><p>{item.context}</p></section><section><h4>Our work</h4><p>{item.work}</p></section><section><h4>Outcome</h4><p>{item.outcome}</p></section></div><div className="work-scope" aria-label={`${item.title} services`}><span>Scope</span><div>{item.services.map((service) => <b key={service}>{service}</b>)}</div></div></div></article>)}</section>
+    <section className="section section-sand campaign-portfolio">
+      <div className="shell">
+        <div className="section-heading campaign-portfolio-heading">
+          <div><p className="eyebrow">Campaign portfolio</p><h2>More work.<br />More ways to move a market.</h2></div>
+          <p>Additional projects from the Next Level archive, matched to the original campaign records and photographs.</p>
+        </div>
+        <div className="campaign-project-grid">
+          {campaignProjects.map((project, index) => <article className="campaign-project-card" id={project.id} key={project.id}>
+            <div className={`campaign-project-image ${project.imageFit === "contain" ? "is-contain" : ""}`}>
+              <img src={assetPath(project.image)} alt={project.title} loading="lazy" />
+              <span>{String(index + 1).padStart(2, "0")}</span>
+            </div>
+            <div className="campaign-project-copy">
+              <p className="eyebrow">{project.tag}</p>
+              <h3>{project.title}</h3>
+              <p className="campaign-project-summary">{project.summary}</p>
+              <p>{project.detail}</p>
+              <div className="campaign-project-services">{project.services.map((service) => <b key={service}>{service}</b>)}</div>
+            </div>
+          </article>)}
+        </div>
+      </div>
+    </section>
     <PageCta />
   </main><Footer /></>;
 }

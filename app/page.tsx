@@ -75,6 +75,20 @@ export default function Home() {
               <div className="case-overlay"><span>U.S. Embassy engagement · 2025</span><h3>Documentary<br />& Proposals</h3><b>Recognition secured ↗</b></div>
             </Link>
           </div>
+          <div className="proof-more-grid" aria-label="More selected projects">
+            <Link href="/work#diaspora-service" className="proof-more-card">
+              <img src={assetPath("/images/campaigns/diaspora-service-partnership.jpeg")} alt="Next Level and the Ethiopian Diaspora Service formalizing their partnership" />
+              <div><span>Partnership marketing</span><h3>Ethiopian Diaspora Service</h3><b>Two-year engagement ↗</b></div>
+            </Link>
+            <Link href="/work#pro-camp" className="proof-more-card">
+              <img src={assetPath("/images/campaigns/us-embassy-pro-camp.jpeg")} alt="Organizers and coaches at the 2025 Pro Camp" />
+              <div><span>Digital campaign · 2025</span><h3>U.S. Embassy Pro Camp</h3><b>Community reach ↗</b></div>
+            </Link>
+            <Link href="/work#dada-juice" className="proof-more-card">
+              <img src={assetPath("/images/campaigns/dada-juice.jpeg")} alt="Dada Juice basketball marketing campaign artwork" />
+              <div><span>Market expansion</span><h3>Dada Juice</h3><b>Promotion + distribution ↗</b></div>
+            </Link>
+          </div>
           </div>
         </section>
 

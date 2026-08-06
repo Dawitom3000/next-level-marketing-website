@@ -44,6 +44,10 @@ test("renders the expanded campaign portfolio with its local media", async () =>
 
   const html = await response.text();
   assert.match(html, /Campaign portfolio/);
+  assert.match(html, /Five ways we move audiences/);
+  assert.match(html, /ATL marketing/);
+  assert.match(html, /BTL marketing/);
+  assert.match(html, /Banners · Posters · Roll-up banners/);
   assert.match(html, /Lifan World Cup/);
   assert.match(html, /Dada Juice Market Expansion/);
   assert.match(html, /Amico Product Introduction/);

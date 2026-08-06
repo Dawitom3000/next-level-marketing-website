@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Footer, Header, InnerHero, PageCta } from "../components/SiteChrome";
 import { assetPath } from "../lib/asset-path";
-import { campaignProjects } from "../data/campaigns";
+import { CampaignPortfolio } from "../components/CampaignPortfolio";
 
 export const metadata: Metadata = { title: "Selected Work", description: "Case studies spanning sports marketing, television, documentary production, and product distribution." };
 
@@ -82,31 +82,34 @@ const cases = [
   },
 ];
 
+const categoryLenses = [
+  { number: "01", title: "Partners", copy: "Institutions, sponsors, broadcasters, venues, and brands with whom we build long-term value.", examples: "U.S. Embassy · Ethiopian Diaspora Service · Nahoo TV" },
+  { number: "02", title: "Sports marketing", copy: "Camps, tournaments, team travel, sponsorships, and live experiences that connect sport with community.", examples: "AND1 · Ethio Ballers · Lifan World Cup" },
+  { number: "03", title: "ATL marketing", copy: "Television, documentary, broadcast, press, and digital media designed to create broad market awareness.", examples: "TV commercials · Documentary · Broadcast production" },
+  { number: "04", title: "BTL marketing", copy: "Direct activations that put products and messages into schools, neighbourhoods, events, and retail environments.", examples: "Sampling · School activations · Door-to-door promotion" },
+  { number: "05", title: "Advertising", copy: "Campaign-ready creative materials that carry a consistent message across physical and digital touchpoints.", examples: "Banners · Posters · Roll-up banners" },
+];
+
 export default function WorkPage() {
   return <><Header /><main>
     <InnerHero eyebrow="Selected work" title="Work that earns attention—and uses it well." intro="A selection of projects across sports, media, communications, events, and distribution." />
+    <section className="section section-dark work-categories">
+      <div className="shell">
+        <div className="section-heading category-heading"><div><p className="eyebrow light">How to explore our work</p><h2>Five ways we move audiences.</h2></div><p>Many assignments cross more than one category. These lenses show the breadth of our role—from partnership and strategy to creative production and field execution.</p></div>
+        <div className="category-lens-grid">{categoryLenses.map((category) => <article key={category.number}>
+          <span>{category.number}</span><h3>{category.title}</h3><p>{category.copy}</p><small>{category.examples}</small>
+        </article>)}</div>
+        <a className="category-jump" href="#campaign-portfolio">Browse the categorized portfolio <span>↓</span></a>
+      </div>
+    </section>
     <section className="section shell work-list">{cases.map((item, index) => <article className="work-detail" id={item.id} key={item.id}><div className="work-number">0{index + 1}</div><div className={`work-photo ${item.imageClass ?? ""}`}><img src={assetPath(item.image)} alt={item.title} /><strong>{item.proof}</strong></div><div className="work-copy"><p className="eyebrow">{item.tag}</p><h2>{item.title}</h2><p className="work-summary">{item.summary}</p><div className="work-story"><section><h4>Context</h4><p>{item.context}</p></section><section><h4>Our work</h4><p>{item.work}</p></section><section><h4>Outcome</h4><p>{item.outcome}</p></section></div><div className="work-scope" aria-label={`${item.title} services`}><span>Scope</span><div>{item.services.map((service) => <b key={service}>{service}</b>)}</div></div></div></article>)}</section>
-    <section className="section section-sand campaign-portfolio">
+    <section className="section section-sand campaign-portfolio" id="campaign-portfolio">
       <div className="shell">
         <div className="section-heading campaign-portfolio-heading">
           <div><p className="eyebrow">Campaign portfolio</p><h2>More work.<br />More ways to move a market.</h2></div>
           <p>Additional projects from the Next Level archive, matched to the original campaign records and photographs.</p>
         </div>
-        <div className="campaign-project-grid">
-          {campaignProjects.map((project, index) => <article className="campaign-project-card" id={project.id} key={project.id}>
-            <div className={`campaign-project-image ${project.imageFit === "contain" ? "is-contain" : ""}`}>
-              <img src={assetPath(project.image)} alt={project.title} loading="lazy" />
-              <span>{String(index + 1).padStart(2, "0")}</span>
-            </div>
-            <div className="campaign-project-copy">
-              <p className="eyebrow">{project.tag}</p>
-              <h3>{project.title}</h3>
-              <p className="campaign-project-summary">{project.summary}</p>
-              <p>{project.detail}</p>
-              <div className="campaign-project-services">{project.services.map((service) => <b key={service}>{service}</b>)}</div>
-            </div>
-          </article>)}
-        </div>
+        <CampaignPortfolio />
       </div>
     </section>
     <PageCta />

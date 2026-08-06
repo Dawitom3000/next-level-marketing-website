@@ -7,7 +7,10 @@ export type CampaignProject = {
   summary: string;
   detail: string;
   services: string[];
+  categories: CampaignCategory[];
 };
+
+export type CampaignCategory = "partners" | "sports" | "atl" | "btl" | "advertising";
 
 export const campaignProjects: CampaignProject[] = [
   {
@@ -18,6 +21,7 @@ export const campaignProjects: CampaignProject[] = [
     summary: "A formal partnership created to connect visiting diaspora communities with relevant activities during Ethiopia’s summer season.",
     detail: "Next Level supported the promotion of activities designed for the visiting Ethiopian diaspora through a two-year partnership with the Ethiopian Diaspora Service. The agreement was signed with Ambassador Fitsum, giving the campaign an institutional foundation for coordinated outreach and seasonal visibility.",
     services: ["Partnership development", "Campaign promotion", "Diaspora outreach"],
+    categories: ["partners", "btl"],
   },
   {
     id: "international-sports-travel",
@@ -27,6 +31,7 @@ export const campaignProjects: CampaignProject[] = [
     summary: "End-to-end international travel and tournament coordination for schools and sports clubs.",
     detail: "Next Level has organized international trips and tournament participation for clubs and school teams travelling to Dubai, Kenya, and Canada. The work connects sports programming with communication, group coordination, travel planning, and the practical support teams need to represent Ethiopia abroad.",
     services: ["International coordination", "Team travel", "Tournament support"],
+    categories: ["partners", "sports"],
   },
   {
     id: "pro-camp",
@@ -36,6 +41,7 @@ export const campaignProjects: CampaignProject[] = [
     summary: "Digital campaign support for a high-visibility basketball development program connected to the U.S. Embassy.",
     detail: "Next Level produced digital marketing content and campaign visibility for U.S. Embassy programs, including the 2025 Pro Camp. The assignment used the agency’s basketball network and communication experience to connect the event with players, schools, families, and the wider sports community.",
     services: ["Digital campaign", "Sports communication", "Community reach"],
+    categories: ["partners", "sports", "atl", "advertising"],
   },
   {
     id: "lifan-world-cup",
@@ -45,6 +51,7 @@ export const campaignProjects: CampaignProject[] = [
     summary: "A branded football competition designed for Lifan Motors’ leading customers.",
     detail: "Next Level organized the Lifan World Cup, a major football competition created for 32 of Lifan Motors’ top customers. The format transformed customer appreciation into a live branded experience, combining sport, participation, audience engagement, and company visibility.",
     services: ["Event concept", "Customer activation", "Tournament delivery"],
+    categories: ["sports", "btl"],
   },
   {
     id: "mix-max",
@@ -54,6 +61,7 @@ export const campaignProjects: CampaignProject[] = [
     summary: "A product campaign that connected a snack brand with basketball culture and active audiences.",
     detail: "For Mix Max Chips, Next Level developed promotional activity that placed the product inside youth and sports environments. The campaign used recognizable basketball imagery and field communication to introduce the Chinese-owned company’s snack product in a locally relevant way.",
     services: ["Product promotion", "Creative campaign", "Audience activation"],
+    categories: ["sports", "btl", "advertising"],
   },
   {
     id: "school-events",
@@ -63,6 +71,7 @@ export const campaignProjects: CampaignProject[] = [
     summary: "Tournaments and carnivals that bring school communities together while giving host institutions meaningful public exposure.",
     detail: "Next Level has organized international-school tournaments and carnivals with institutions including One Planet International School, Cambridge Academy, and Lebawi International School. These events created participation for students and families while positioning the schools as active, welcoming community destinations.",
     services: ["School partnerships", "Tournament production", "Community events"],
+    categories: ["partners", "sports", "btl"],
   },
   {
     id: "addis-chicken",
@@ -73,6 +82,7 @@ export const campaignProjects: CampaignProject[] = [
     summary: "A one-minute television commercial supported by targeted business-to-business market outreach.",
     detail: "Next Level produced a one-minute television commercial for Addis Chicken Processing PLC and followed it with an extensive campaign introducing the company’s services to food-delivery businesses. The combined approach linked media production with practical sales-oriented communication.",
     services: ["TV commercial", "B2B promotion", "Market outreach"],
+    categories: ["atl", "advertising"],
   },
   {
     id: "tasty-foods",
@@ -82,6 +92,7 @@ export const campaignProjects: CampaignProject[] = [
     summary: "Long-term snack promotion supported by direct distribution and event visibility.",
     detail: "Next Level combined marketing with physical distribution for Tasty Foods products. Consistent field promotion, product availability, and sports-event visibility helped the brand remain present in the places where young consumers and families gathered.",
     services: ["Snack marketing", "Direct distribution", "Event visibility"],
+    categories: ["sports", "btl"],
   },
   {
     id: "mineral-water",
@@ -92,6 +103,7 @@ export const campaignProjects: CampaignProject[] = [
     summary: "A school-by-school product introduction reinforced by a public 5K activation.",
     detail: "The BTL campaign introduced a new flavoured mineral-water product across 60 schools through direct marketing and on-site branding. A five-kilometre run extended the campaign beyond the school network and brought the product in front of a much larger public audience.",
     services: ["BTL marketing", "60-school activation", "5K event"],
+    categories: ["sports", "btl", "advertising"],
   },
   {
     id: "ballers-gear",
@@ -101,6 +113,7 @@ export const campaignProjects: CampaignProject[] = [
     summary: "Online and on-ground brand building for a basketball merchandise company.",
     detail: "Next Level served as a brand ambassador for Ballers Gear and organized an extensive campaign across digital and physical channels. The work connected merchandise visibility with basketball communities, retail environments, and the cultural credibility of the wider sports platform.",
     services: ["Brand ambassadorship", "Digital marketing", "Ground activation"],
+    categories: ["partners", "sports", "btl", "advertising"],
   },
   {
     id: "sofi-malt",
@@ -111,6 +124,7 @@ export const campaignProjects: CampaignProject[] = [
     summary: "A launch campaign built around participation, product sampling, basketball, and school communities.",
     detail: "Next Level organized major events to introduce Sofi Malt’s new product to the market. The activation combined sampling with school promotions, branded jersey giveaways, player engagement, and a basketball-league platform that made the product part of an energetic youth experience.",
     services: ["Launch events", "Product sampling", "School promotion"],
+    categories: ["sports", "btl", "advertising"],
   },
   {
     id: "kakit",
@@ -121,6 +135,7 @@ export const campaignProjects: CampaignProject[] = [
     summary: "Digital campaign development created to strengthen product awareness and advertising consistency.",
     detail: "Next Level supported Katakit through digital marketing, creative editing, and advertising. The assignment focused on converting brand material into campaign-ready content that could be published consistently and used to introduce the products to a broader audience.",
     services: ["Digital marketing", "Content editing", "Advertising"],
+    categories: ["atl", "advertising"],
   },
   {
     id: "dada-juice",
@@ -130,6 +145,7 @@ export const campaignProjects: CampaignProject[] = [
     summary: "A market-penetration campaign connecting product promotion with distribution across Ethiopia.",
     detail: "Next Level supported Dada Juice with a campaign designed to introduce the product, build demand, and expand physical reach. Sports and youth-community visibility helped make the product relatable, while distribution activity carried the campaign beyond a single event or city.",
     services: ["Market penetration", "Product promotion", "Distribution"],
+    categories: ["sports", "btl", "advertising"],
   },
   {
     id: "amico",
@@ -140,5 +156,6 @@ export const campaignProjects: CampaignProject[] = [
     summary: "A combined digital and face-to-face campaign introducing Amico products directly to consumers.",
     detail: "Next Level introduced Amico’s product range through coordinated digital marketing and door-to-door promotional activity. The approach paired broad online visibility with direct consumer contact, helping explain the products and create recognition at neighbourhood level.",
     services: ["Digital campaign", "Door-to-door promotion", "Product introduction"],
+    categories: ["atl", "btl", "advertising"],
   },
 ];

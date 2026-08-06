@@ -8,14 +8,15 @@ export default function ExperiencePage() {
       <Header />
       <main>
         <InnerHero
+          variant="experience"
           eyebrow="Clients, brands & collaborators"
-          title="Trusted across markets and industries."
+          title="Organizations connected through real projects."
           intro="A verified selection of organizations and products connected to Next Level through campaigns, distribution, sponsorship, production, events, and institutional collaboration."
         />
 
         <section className="section shell logo-library">
           <div className="section-heading">
-            <div><p className="eyebrow">Verified logo library</p><h2>Relationships built through execution.</h2></div>
+            <div><p className="eyebrow">Verified logo library</p><h2>Clients, partners, and collaborators.</h2></div>
             <p>Each mark is displayed in its original proportions. The nature and scope of every engagement varied by project.</p>
           </div>
           <LogoWall logos={experienceLogos} />

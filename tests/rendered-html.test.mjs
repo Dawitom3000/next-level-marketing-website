@@ -30,7 +30,7 @@ test("server-renders the Next Level homepage and expanded proof", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Next Level Marketing &amp; Communications<\/title>/i);
-  assert.match(html, /Proof moves/);
+  assert.match(html, /Projects with<br\s*\/>documented results/);
   assert.match(html, /Ethiopian Diaspora Service/);
   assert.match(html, /U\.S\. Embassy Pro Camp/);
   assert.match(html, /Dada Juice/);
@@ -44,10 +44,13 @@ test("renders the expanded campaign portfolio with its local media", async () =>
 
   const html = await response.text();
   assert.match(html, /Campaign portfolio/);
-  assert.match(html, /Five ways we move audiences/);
+  assert.match(html, /Five areas of experience/);
   assert.match(html, /ATL marketing/);
   assert.match(html, /BTL marketing/);
-  assert.match(html, /Banners · Posters · Roll-up banners/);
+  assert.match(html, /Banners · Posters · Roll up banners/);
+  assert.match(html, /inner-hero-work/);
+  assert.match(html, /FIELD/);
+  assert.doesNotMatch(html, /NLM\+C|inner-orbit/);
   assert.match(html, /Lifan World Cup/);
   assert.match(html, /Dada Juice Market Expansion/);
   assert.match(html, /Amico Product Introduction/);

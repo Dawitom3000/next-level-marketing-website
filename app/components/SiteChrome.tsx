@@ -2,11 +2,11 @@ import Link from "next/link";
 import { assetPath } from "../lib/asset-path";
 
 const services = [
-  ["01", "Marketing strategy", "Audience insight, positioning, campaign planning, and market-entry thinking."],
+  ["01", "Marketing strategy", "Audience insight, positioning, campaign planning, and plans for entering new markets."],
   ["02", "Brand activation", "Promotions, launches, sponsorships, and experiences that create participation."],
   ["03", "Strategic communications", "Messaging, public relations, stakeholder engagement, and media coordination."],
   ["04", "Media production", "Documentaries, interviews, campaign content, and production deployment."],
-  ["05", "Events & press", "Press conferences, tournaments, launches, and end-to-end event execution."],
+  ["05", "Events & press", "Press conferences, tournaments, launches, and complete event delivery."],
   ["06", "Distribution support", "Retail reach, visibility, field coordination, and local product distribution."],
 ];
 
@@ -55,7 +55,7 @@ export function Footer() {
       <div className="shell footer-grid">
         <div>
           <Link className="logo logo-footer" href="/"><span className="logo-mark"><b>N</b><b>L</b></span><span>Next Level<small>Marketing + Communications</small></span></Link>
-          <p>Market intelligence, creative communication, and accountable execution—built in Ethiopia.</p>
+          <p>Market intelligence, creative communication, and accountable execution. Built in Ethiopia.</p>
         </div>
         <div><h4>Navigate</h4><Link href="/about">About</Link><Link href="/services">Services</Link><Link href="/work">Work</Link><Link href="/experience">Experience</Link><Link href="/contact">Contact</Link></div>
         <div><h4>Talk to us</h4><a href="tel:+251911998000">+251 911 998 000</a><a href="tel:+251970437830">+251 970 437 830</a><a href="mailto:carlos2thornton@yahoo.com">carlos2thornton@yahoo.com</a><a href="mailto:felekedawit11@gmail.com">felekedawit11@gmail.com</a></div>
@@ -82,6 +82,16 @@ export function PageCta() {
   );
 }
 
-export function InnerHero({ eyebrow, title, intro }: { eyebrow: string; title: string; intro: string }) {
-  return <section className="inner-hero section-dark"><div className="shell inner-hero-grid"><p className="eyebrow light">{eyebrow}</p><div><h1>{title}</h1><p>{intro}</p></div><span className="inner-orbit" aria-hidden="true">NLM+C</span></div></section>;
+const heroArt = {
+  work: ["FIELD", "PROOF", "RESULTS"],
+  experience: ["BRANDS", "PARTNERS", "TRUST"],
+  about: ["2006", "2018", "TODAY"],
+  services: ["01", "02", "03", "04", "05", "06"],
+} as const;
+
+export function InnerHero({ eyebrow, title, intro, variant }: { eyebrow: string; title: string; intro: string; variant: keyof typeof heroArt }) {
+  return <section className={`inner-hero inner-hero-${variant} section-dark`}>
+    <div className={`inner-hero-art inner-hero-art-${variant}`} aria-hidden="true">{heroArt[variant].map((label) => <span key={label}>{label}</span>)}</div>
+    <div className="shell inner-hero-grid"><p className="eyebrow light">{eyebrow}</p><div><h1>{title}</h1><p>{intro}</p></div></div>
+  </section>;
 }

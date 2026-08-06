@@ -21,7 +21,7 @@ export default function Home() {
               <p className="eyebrow light"><i className="live-dot" /> Addis Ababa · Ethiopia · Since 2006</p>
               <h1>We move brands <em>through culture.</em></h1>
               <p className="hero-lede">
-                Strategy, communication, promotion, production, events, and distribution—connected by more than 20 years of real Ethiopian market experience.
+                Strategy, communication, promotion, production, events, and distribution. More than 20 years of Ethiopian market experience connects it all.
               </p>
               <div className="button-row">
                 <Link className="button button-primary" href="/work">See what we move <span>↗</span></Link>
@@ -31,7 +31,7 @@ export default function Home() {
 
             <div className="hero-side reveal delay-1">
               <span className="hero-side-kicker">20+ years in market</span>
-              <p>Local intelligence and international ambition—built through real campaigns, partnerships, productions, events, and distribution.</p>
+              <p>Local intelligence with international ambition, proven through campaigns, partnerships, productions, events, and distribution.</p>
               <div className="hero-disciplines"><span>Strategy</span><span>Communications</span><span>Activation</span><span>Distribution</span></div>
               <small>Footage from the Next Level archive</small>
             </div>
@@ -50,14 +50,14 @@ export default function Home() {
 
         <section className="section shell manifesto">
           <p className="eyebrow">Our point of view</p>
-          <p className="manifesto-copy">Attention is easy to buy. <span>Trust is earned in the market.</span> We combine local intelligence with international ambition to turn visibility into action.</p>
+          <p className="manifesto-copy">People act on messages they understand and trust. <span>Local knowledge makes the difference.</span> We connect strategy with practical market delivery.</p>
           <Link className="text-link" href="/about">The Next Level story <span>↗</span></Link>
         </section>
 
         <section className="section work-showcase section-dark">
           <div className="shell">
           <div className="section-heading work-heading">
-            <div><p className="eyebrow light">Selected work</p><h2>Proof moves<br />faster than promises.</h2></div>
+            <div><p className="eyebrow light">Selected work</p><h2>Projects with<br />documented results.</h2></div>
             <Link className="text-link light-link" href="/work">View all work <span>↗</span></Link>
           </div>
 
@@ -78,7 +78,7 @@ export default function Home() {
           <div className="proof-more-grid" aria-label="More selected projects">
             <Link href="/work#diaspora-service" className="proof-more-card">
               <img src={assetPath("/images/campaigns/diaspora-service-partnership.jpeg")} alt="Next Level and the Ethiopian Diaspora Service formalizing their partnership" />
-              <div><span>Partnership marketing</span><h3>Ethiopian Diaspora Service</h3><b>Two-year engagement ↗</b></div>
+              <div><span>Partnership marketing</span><h3>Ethiopian Diaspora Service</h3><b>Two year engagement ↗</b></div>
             </Link>
             <Link href="/work#pro-camp" className="proof-more-card">
               <img src={assetPath("/images/campaigns/us-embassy-pro-camp.jpeg")} alt="Organizers and coaches at the 2025 Pro Camp" />
@@ -95,7 +95,7 @@ export default function Home() {
         <section className="section section-sand capability-home">
           <div className="shell">
             <div className="section-heading">
-              <div><p className="eyebrow">Connected capabilities</p><h2>One team. From signal to street.</h2></div>
+              <div><p className="eyebrow">Connected capabilities</p><h2>Strategy, communication, and delivery in one team.</h2></div>
               <p>We connect strategic thinking with the communication, partnerships, production, events, and distribution needed to make work land.</p>
             </div>
             <ServiceGrid compact />

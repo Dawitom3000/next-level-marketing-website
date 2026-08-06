@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Next Level Marketing & Communications",
     description:
-      "Strategy, communication, promotion, production, events, and distribution—built for the Ethiopian market.",
+      "Strategy, communication, promotion, production, events, and distribution for the Ethiopian market.",
     type: "website",
     locale: "en_ET",
     images: [{ url: assetPath("/og.png"), width: 1735, height: 907, alt: "Next Level Marketing & Communications" }],

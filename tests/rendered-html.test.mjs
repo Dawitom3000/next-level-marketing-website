@@ -49,6 +49,7 @@ test("renders the expanded campaign portfolio with its local media", async () =>
   assert.match(html, /BTL marketing/);
   assert.match(html, /Banners · Posters · Roll up banners/);
   assert.match(html, /inner-hero-work/);
+  assert.match(html, /page-hero-summer-camp\.webp/);
   assert.match(html, /FIELD/);
   assert.doesNotMatch(html, /NLM\+C|inner-orbit/);
   assert.match(html, /Lifan World Cup/);
@@ -71,5 +72,14 @@ test("renders the expanded campaign portfolio with its local media", async () =>
     "amico.jpeg",
   ]) {
     await access(new URL(`../public/images/campaigns/${image}`, import.meta.url));
+  }
+
+  for (const image of [
+    "page-hero-summer-camp.webp",
+    "page-hero-production-set.webp",
+    "page-hero-tripolla-global-dinner-conversation.webp",
+    "page-hero-stakeholder-relationship.webp",
+  ]) {
+    await access(new URL(`../public/images/${image}`, import.meta.url));
   }
 });

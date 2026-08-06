@@ -82,24 +82,16 @@ export function PageCta() {
   );
 }
 
-const heroArt = {
-  work: ["FIELD", "PROOF", "RESULTS"],
-  experience: ["BRANDS", "PARTNERS", "TRUST"],
-  about: ["2006", "2018", "TODAY"],
-  services: ["01", "02", "03", "04", "05", "06"],
-} as const;
-
 const heroPhotos = {
   work: "/images/page-hero-summer-camp.webp",
   experience: "/images/page-hero-tripolla-global-dinner-conversation.webp",
   about: "/images/page-hero-stakeholder-relationship.webp",
-  services: "/images/page-hero-production-set.webp",
+  services: "/images/page-hero-media-interview.webp",
 } as const;
 
-export function InnerHero({ eyebrow, title, intro, variant }: { eyebrow: string; title: string; intro: string; variant: keyof typeof heroArt }) {
+export function InnerHero({ eyebrow, title, intro, variant }: { eyebrow: string; title: string; intro: string; variant: keyof typeof heroPhotos }) {
   return <section className={`inner-hero inner-hero-${variant} section-dark`}>
     <img className="inner-hero-photo" src={assetPath(heroPhotos[variant])} alt="" aria-hidden="true" />
-    <div className={`inner-hero-art inner-hero-art-${variant}`} aria-hidden="true">{heroArt[variant].map((label) => <span key={label}>{label}</span>)}</div>
     <div className="shell inner-hero-grid"><p className="eyebrow light">{eyebrow}</p><div><h1>{title}</h1><p>{intro}</p></div></div>
   </section>;
 }

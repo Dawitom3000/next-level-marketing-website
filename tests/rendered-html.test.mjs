@@ -50,8 +50,7 @@ test("renders the expanded campaign portfolio with its local media", async () =>
   assert.match(html, /Banners · Posters · Roll up banners/);
   assert.match(html, /inner-hero-work/);
   assert.match(html, /page-hero-summer-camp\.webp/);
-  assert.match(html, /FIELD/);
-  assert.doesNotMatch(html, /NLM\+C|inner-orbit/);
+  assert.doesNotMatch(html, /inner-hero-art|NLM\+C|inner-orbit/);
   assert.match(html, /Lifan World Cup/);
   assert.match(html, /Dada Juice Market Expansion/);
   assert.match(html, /Amico Product Introduction/);
@@ -76,7 +75,7 @@ test("renders the expanded campaign portfolio with its local media", async () =>
 
   for (const image of [
     "page-hero-summer-camp.webp",
-    "page-hero-production-set.webp",
+    "page-hero-media-interview.webp",
     "page-hero-tripolla-global-dinner-conversation.webp",
     "page-hero-stakeholder-relationship.webp",
   ]) {

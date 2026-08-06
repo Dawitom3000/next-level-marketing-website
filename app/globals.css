@@ -189,45 +189,15 @@ p { line-height: 1.68; }
 
 /* Inner pages */
 .inner-hero { position: relative; isolation: isolate; overflow: hidden; min-height: 590px; display: flex; align-items: center; padding: 108px 0 116px; border-bottom: 1px solid #343630; }
-.inner-hero:after { content: ""; position: absolute; z-index: -3; inset: 0; background: linear-gradient(90deg,rgba(11,12,10,.98) 0%,rgba(11,12,10,.92) 38%,rgba(11,12,10,.62) 70%,rgba(11,12,10,.7) 100%),linear-gradient(0deg,rgba(11,12,10,.72),transparent 58%); pointer-events: none; }
-.inner-hero:before { content: ""; position: absolute; z-index: -2; inset: 0; opacity: .58; pointer-events: none; }
-.inner-hero-photo { position: absolute; z-index: -4; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.72) contrast(1.08); transform: scale(1.015); }
+.inner-hero:after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg,rgba(11,12,10,.95) 0%,rgba(11,12,10,.82) 38%,rgba(11,12,10,.34) 72%,rgba(11,12,10,.42) 100%),linear-gradient(0deg,rgba(11,12,10,.56),transparent 58%); pointer-events: none; }
+.inner-hero-photo { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.84) contrast(1.06); transform: scale(1.01); }
 .inner-hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 160px minmax(0,1fr); gap: 38px; align-items: start; }
 .inner-hero h1 { max-width: 1010px; margin: 0 0 35px; font-size: clamp(66px,8.5vw,124px); line-height: .84; }
 .inner-hero-grid > div > p { max-width: 670px; margin: 0; color: #c0c0b9; font-size: 18px; }
-.inner-hero-art { position: absolute; z-index: -1; inset: 0; overflow: hidden; pointer-events: none; }
-.inner-hero-art span { position: absolute; font-family: var(--font-display); font-weight: 800; }
-
-.inner-hero-work:before { background-image: linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px),radial-gradient(circle at 78% 46%,rgba(255,84,28,.24),transparent 28%); background-size: 72px 72px,72px 72px,auto; }
-.inner-hero-art-work span { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.12); font-size: clamp(100px,14vw,220px); line-height: .75; letter-spacing: -.08em; }
-.inner-hero-art-work span:nth-child(1) { top: 34px; right: -20px; }
-.inner-hero-art-work span:nth-child(2) { top: 220px; right: 7%; }
-.inner-hero-art-work span:nth-child(3) { right: -42px; bottom: 12px; color: rgba(255,84,28,.1); -webkit-text-stroke: 0; }
-
-.inner-hero-experience:before { background-image: radial-gradient(circle at 78% 46%,rgba(255,84,28,.2),transparent 24%),radial-gradient(circle at 86% 20%,rgba(255,255,255,.08) 0 2px,transparent 3px),radial-gradient(circle at 74% 72%,rgba(255,255,255,.08) 0 2px,transparent 3px); background-size: auto,42px 42px,58px 58px; }
-.inner-hero-art-experience { right: 2%; left: auto; width: 43%; }
-.inner-hero-art-experience:before,.inner-hero-art-experience:after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; }
-.inner-hero-art-experience:before { width: 420px; height: 420px; right: -40px; top: 55px; }
-.inner-hero-art-experience:after { width: 260px; height: 260px; right: 175px; top: 185px; border-color: rgba(255,84,28,.28); }
-.inner-hero-art-experience span { display: grid; place-items: center; padding: 0 26px; border: 1px solid rgba(255,255,255,.17); border-radius: 999px; background: rgba(11,12,10,.72); color: #c7c7c0; font-size: 10px; letter-spacing: .16em; }
-.inner-hero-art-experience span:nth-child(1) { width: 210px; height: 70px; right: 88px; top: 95px; }
-.inner-hero-art-experience span:nth-child(2) { width: 245px; height: 82px; right: 240px; top: 258px; color: var(--orange); }
-.inner-hero-art-experience span:nth-child(3) { width: 180px; height: 64px; right: 62px; bottom: 88px; }
-
-.inner-hero-about:before { background: linear-gradient(90deg,transparent 0 60%,rgba(255,84,28,.09) 60% 60.2%,transparent 60.2%),linear-gradient(135deg,rgba(255,255,255,.035) 25%,transparent 25%) 0 0/42px 42px; }
-.inner-hero-art-about { right: 0; left: auto; width: 42%; display: grid; grid-template-columns: repeat(3,1fr); border-left: 1px solid rgba(255,255,255,.1); }
-.inner-hero-art-about span { position: relative; display: flex; align-items: flex-end; padding: 0 18px 52px; border-right: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.16); font-size: clamp(40px,5vw,78px); letter-spacing: -.08em; writing-mode: vertical-rl; }
-.inner-hero-art-about span:nth-child(2) { color: rgba(255,84,28,.32); }
-
-.inner-hero-services:before { background: radial-gradient(circle at 78% 48%,rgba(255,84,28,.18),transparent 30%); }
-.inner-hero-art-services { right: 4%; left: auto; top: 58px; bottom: 58px; width: 39%; display: grid; grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(2,1fr); }
-.inner-hero-art-services span { position: relative; display: flex; align-items: flex-end; justify-content: space-between; padding: 22px; border: 1px solid rgba(255,255,255,.11); color: rgba(255,255,255,.26); font-size: 30px; letter-spacing: -.05em; }
-.inner-hero-art-services span:nth-child(2),.inner-hero-art-services span:nth-child(5) { background: rgba(255,84,28,.11); color: var(--orange); }
-.inner-hero-art-services span:after { content: "+"; color: rgba(255,255,255,.18); font-size: 13px; }
 .inner-hero-work .inner-hero-photo { object-position: center 34%; }
 .inner-hero-experience .inner-hero-photo { object-position: center 42%; }
 .inner-hero-about .inner-hero-photo { object-position: center 38%; }
-.inner-hero-services .inner-hero-photo { object-position: center 52%; }
+.inner-hero-services .inner-hero-photo { object-position: center 46%; }
 .story-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: 110px; }
 .rich-copy > p { font-size: 20px; line-height: 1.65; }
 .rich-copy blockquote { margin: 58px 0 0; padding: 36px 0 0 35px; border-top: 1px solid var(--line); border-left: 6px solid var(--orange); font: 750 30px/1.3 var(--font-display); letter-spacing: -.035em; }
@@ -421,10 +391,8 @@ p { line-height: 1.68; }
   .gallery-image { height: 500px; }
   .logo-wall { grid-template-columns: repeat(2,1fr); }
   .inner-hero { min-height: 530px; }
-  .inner-hero:after { background: linear-gradient(90deg,rgba(11,12,10,.98) 0%,rgba(11,12,10,.88) 56%,rgba(11,12,10,.66) 100%),linear-gradient(0deg,rgba(11,12,10,.72),transparent 58%); }
+  .inner-hero:after { background: linear-gradient(90deg,rgba(11,12,10,.95) 0%,rgba(11,12,10,.8) 52%,rgba(11,12,10,.42) 100%),linear-gradient(0deg,rgba(11,12,10,.58),transparent 58%); }
   .inner-hero-grid { grid-template-columns: 1fr; }
-  .inner-hero-art { opacity: .55; }
-  .inner-hero-art-experience,.inner-hero-art-about,.inner-hero-art-services { width: 58%; }
   .story-grid,.leadership-grid,.contact-grid,.artwork-grid,.founder-proof-grid { grid-template-columns: 1fr; gap: 55px; }
   .timeline-grid { grid-template-columns: 1fr; }
   .timeline-grid div { min-height: 190px; border-left: 1px solid #343630; border-bottom: 1px solid #343630; }
@@ -473,19 +441,13 @@ p { line-height: 1.68; }
   .logo-wall { grid-template-columns: 1fr; }
   .logo-artwork { height: 158px; }
   .inner-hero { padding: 76px 0 84px; }
-  .inner-hero:after { background: linear-gradient(rgba(11,12,10,.76),rgba(11,12,10,.9)); }
-  .inner-hero-photo { filter: saturate(.7) contrast(1.06); }
+  .inner-hero:after { background: linear-gradient(rgba(11,12,10,.6),rgba(11,12,10,.86)); }
+  .inner-hero-photo { filter: saturate(.82) contrast(1.05); }
   .inner-hero-work .inner-hero-photo { object-position: 61% center; }
   .inner-hero-experience .inner-hero-photo { object-position: 56% center; }
   .inner-hero-about .inner-hero-photo { object-position: 58% center; }
   .inner-hero-services .inner-hero-photo { object-position: 68% center; }
   .inner-hero h1,.contact-page h1 { font-size: 56px; }
-  .inner-hero-art { opacity: .38; }
-  .inner-hero-art-work span { font-size: 105px; }
-  .inner-hero-art-experience,.inner-hero-art-about,.inner-hero-art-services { right: -22%; width: 86%; }
-  .inner-hero-art-experience span:nth-child(2) { right: 120px; }
-  .inner-hero-art-about span { font-size: 44px; }
-  .inner-hero-art-services { grid-template-columns: repeat(2,1fr); }
   .contact-page-art { opacity: .48; }
   .rich-copy > p { font-size: 17px; }
   .rich-copy blockquote { padding-left: 22px; font-size: 24px; }

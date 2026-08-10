@@ -30,10 +30,12 @@ test("server-renders the Next Level homepage and expanded proof", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Next Level Marketing &amp; Communications<\/title>/i);
-  assert.match(html, /Projects with<br\s*\/>documented results/);
-  assert.match(html, /Ethiopian Diaspora Service/);
-  assert.match(html, /U\.S\. Embassy Pro Camp/);
-  assert.match(html, /Dada Juice/);
+  assert.match(html, /What changed because we were there/);
+  assert.match(html, /Ethio Ballers/);
+  assert.match(html, /500\+/);
+  assert.match(html, /AND1 Ethiopia Tours/);
+  assert.match(html, /Tasties Market Reach/);
+  assert.match(html, /U\.S\. Embassy meeting secured/);
   assert.match(html, /Moments behind the work|people and moments behind the work/i);
   assert.doesNotMatch(html, /Your site is taking shape|Building your site/);
 });

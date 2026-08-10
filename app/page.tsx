@@ -56,39 +56,86 @@ export default function Home() {
 
         <section className="section work-showcase section-dark">
           <div className="shell">
-          <div className="section-heading work-heading">
-            <div><p className="eyebrow light">Selected work</p><h2>Projects with<br />documented results.</h2></div>
-            <Link className="text-link light-link" href="/work">View all work <span>↗</span></Link>
-          </div>
+            <div className="section-heading results-heading">
+              <div>
+                <p className="eyebrow light">Selected results</p>
+                <h2>What changed because we were there.</h2>
+              </div>
+              <div className="results-heading-side">
+                <p>A selection of assignments showing the challenge, Next Level&apos;s role, and the result delivered.</p>
+                <Link className="text-link light-link" href="/work">Explore every case <span>↗</span></Link>
+              </div>
+            </div>
 
-          <div className="case-grid">
-            <Link href="/work#and1" className="case-card case-large">
-              <div className="case-image case-logo-art case-logo-and1"><img src={assetPath("/logos/and1.png")} alt="AND1" /></div>
-              <div className="case-overlay"><span>International sports marketing · 2008 & 2010</span><h3>AND1<br />Ethiopia Tours</h3><b>Full market execution ↗</b></div>
-            </Link>
-            <Link href="/work#coach-carlos" className="case-card">
-              <div className="case-image"><img src={assetPath("/images/coach-carlos-show.jpg")} alt="Coach Carlos introducing The Coach Carlos Show" /></div>
-              <div className="case-overlay"><span>Media & production · Nahoo TV</span><h3>The Coach<br />Carlos Show</h3><b>Culture on screen ↗</b></div>
-            </Link>
-            <Link href="/work#documentary" className="case-card case-photo-contain">
-              <div className="case-image"><img src={assetPath("/images/us-embassy-documentary-meeting.jpg")} alt="Next Level representatives following a meeting at the U.S. Embassy" /></div>
-              <div className="case-overlay"><span>U.S. Embassy engagement · 2025</span><h3>Documentary<br />& Proposals</h3><b>Recognition secured ↗</b></div>
-            </Link>
-          </div>
-          <div className="proof-more-grid" aria-label="More selected projects">
-            <Link href="/work#diaspora-service" className="proof-more-card">
-              <img src={assetPath("/images/campaigns/diaspora-service-partnership.jpeg")} alt="Next Level and the Ethiopian Diaspora Service formalizing their partnership" />
-              <div><span>Partnership marketing</span><h3>Ethiopian Diaspora Service</h3><b>Two year engagement ↗</b></div>
-            </Link>
-            <Link href="/work#pro-camp" className="proof-more-card">
-              <img src={assetPath("/images/campaigns/us-embassy-pro-camp.jpeg")} alt="Organizers and coaches at the 2025 Pro Camp" />
-              <div><span>Digital campaign · 2025</span><h3>U.S. Embassy Pro Camp</h3><b>Community reach ↗</b></div>
-            </Link>
-            <Link href="/work#dada-juice" className="proof-more-card">
-              <img src={assetPath("/images/campaigns/dada-juice.jpeg")} alt="Dada Juice basketball marketing campaign artwork" />
-              <div><span>Market expansion</span><h3>Dada Juice</h3><b>Promotion + distribution ↗</b></div>
-            </Link>
-          </div>
+            <div className="results-editorial" aria-label="Selected project results">
+              <Link href="/work#ethio-ballers" className="result-case result-featured">
+                <div className="result-media">
+                  <img src={assetPath("/images/summer-camp.jpg")} alt="Coach Carlos with guests at an Ethio Ballers summer camp" />
+                  <span className="result-index">01</span>
+                </div>
+                <div className="result-content">
+                  <p className="result-meta">Youth sports marketing · Addis Ababa</p>
+                  <h3>Ethio Ballers<br />Summer Camp</h3>
+                  <p className="result-summary">A trusted annual youth sports platform built through parent communication, school partnerships, venue activation, promotion, and dependable event delivery.</p>
+                  <div className="result-numbers" aria-label="Ethio Ballers results">
+                    <div><strong>10+</strong><span>Years of collaboration</span></div>
+                    <div><strong>500+</strong><span>Students joining annually</span></div>
+                  </div>
+                  <div className="result-scope" aria-label="Next Level role">
+                    <span>Parent communication</span><span>School partnerships</span><span>Event delivery</span>
+                  </div>
+                  <b className="result-link">Read the full case <span>↗</span></b>
+                </div>
+              </Link>
+
+              <div className="result-pair">
+                <Link href="/work#and1" className="result-case result-standard">
+                  <div className="result-media">
+                    <img src={assetPath("/images/basketball-award-presentation.jpg")} alt="Coach Carlos presenting an award during an international basketball event" />
+                    <span className="result-index">02</span>
+                    <span className="result-brand-mark"><img src={assetPath("/logos/and1.png")} alt="AND1" /></span>
+                  </div>
+                  <div className="result-content">
+                    <p className="result-meta">International sports marketing · 2008 &amp; 2010</p>
+                    <h3>AND1 Ethiopia Tours</h3>
+                    <div className="result-lead"><strong>2</strong><span>International tours delivered</span></div>
+                    <p className="result-summary">Next Level managed the Ethiopian side of both visits, connecting promotion, sponsors, media, venues, guest handling, logistics, and live event operations.</p>
+                    <div className="result-scope"><span>Campaign strategy</span><span>Event operations</span><span>Media relations</span></div>
+                    <b className="result-link">Read the full case <span>↗</span></b>
+                  </div>
+                </Link>
+
+                <Link href="/work#tasties" className="result-case result-standard">
+                  <div className="result-media">
+                    <img src={assetPath("/images/campaigns/tasty-foods.jpeg")} alt="Coach Carlos speaking during a Tasties sports campaign" />
+                    <span className="result-index">03</span>
+                  </div>
+                  <div className="result-content">
+                    <p className="result-meta">Product marketing and distribution</p>
+                    <h3>Tasties Market Reach</h3>
+                    <div className="result-lead"><strong>4</strong><span>Cities reached through distribution</span></div>
+                    <p className="result-summary">Promotion and physical availability worked together across Addis Ababa, Bahir Dar, Hawassa, and Jimma to build sustained recognition.</p>
+                    <div className="result-scope"><span>Direct distribution</span><span>Field promotion</span><span>Event sponsorship</span></div>
+                    <b className="result-link">Read the full case <span>↗</span></b>
+                  </div>
+                </Link>
+              </div>
+
+              <Link href="/work#documentary" className="result-case result-wide">
+                <div className="result-media">
+                  <img src={assetPath("/images/us-embassy-documentary-meeting.jpg")} alt="Next Level representatives following a meeting at the U.S. Embassy" />
+                  <span className="result-index">04</span>
+                </div>
+                <div className="result-content">
+                  <p className="result-meta">Documentary and stakeholder communication · 2025</p>
+                  <h3>20 Years of Excellence</h3>
+                  <div className="result-outcome"><small>Recorded outcome</small><strong>U.S. Embassy meeting secured</strong></div>
+                  <p className="result-summary">Next Level independently funded and produced the basketball documentary, then used it with additional proposals to create recognition and open a conversation about future community support.</p>
+                  <div className="result-scope"><span>Documentary strategy</span><span>Production</span><span>Diplomatic communication</span></div>
+                  <b className="result-link">Read the full case <span>↗</span></b>
+                </div>
+              </Link>
+            </div>
           </div>
         </section>
 

@@ -111,3 +111,17 @@ test("renders the expanded campaign portfolio with its local media", async () =>
     await access(new URL(`../public/images/${image}`, import.meta.url));
   }
 });
+
+test("renders direct enquiry channels without collecting website submissions", async () => {
+  const response = await render("/contact");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Start with a clear brief/);
+  assert.match(html, /Prepare an email/);
+  assert.match(html, /mailto:felekedawit11@gmail\.com/);
+  assert.match(html, /wa\.me\/251970437830/);
+  assert.match(html, /wa\.me\/251911998000/);
+  assert.match(html, /does not collect or store your enquiry/);
+  assert.doesNotMatch(html, /<form\b/i);
+});

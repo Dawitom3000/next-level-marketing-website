@@ -27,6 +27,9 @@ test("server-renders the Next Level homepage and expanded proof", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
+  assert.equal(response.headers.get("x-content-type-options"), "nosniff");
+  assert.equal(response.headers.get("x-frame-options"), "SAMEORIGIN");
+  assert.equal(response.headers.get("referrer-policy"), "strict-origin-when-cross-origin");
 
   const html = await response.text();
   assert.match(html, /<title>Next Level Marketing &amp; Communications<\/title>/i);
@@ -38,6 +41,30 @@ test("server-renders the Next Level homepage and expanded proof", async () => {
   assert.match(html, /U\.S\. Embassy meeting secured/);
   assert.match(html, /Moments behind the work|people and moments behind the work/i);
   assert.doesNotMatch(html, /Your site is taking shape|Building your site/);
+});
+
+test("serves production health, indexing, and failure routes", async () => {
+  const health = await render("/api/health");
+  assert.equal(health.status, 200);
+  assert.match(health.headers.get("cache-control") ?? "", /no-store/);
+  assert.equal(health.headers.get("x-content-type-options"), "nosniff");
+  const healthPayload = await health.json();
+  assert.equal(healthPayload.status, "ok");
+  assert.equal(healthPayload.service, "next-level-marketing-website");
+
+  const robots = await render("/robots.txt");
+  assert.equal(robots.status, 200);
+  assert.match(await robots.text(), /Sitemap: .*\/sitemap\.xml/);
+
+  const sitemap = await render("/sitemap.xml");
+  assert.equal(sitemap.status, 200);
+  const sitemapXml = await sitemap.text();
+  assert.match(sitemapXml, /<loc>.*\/work<\/loc>/);
+  assert.match(sitemapXml, /<loc>.*\/contact<\/loc>/);
+
+  const missing = await render("/this-page-does-not-exist");
+  assert.equal(missing.status, 404);
+  assert.match(await missing.text(), /This page has moved/);
 });
 
 test("renders the expanded campaign portfolio with its local media", async () => {

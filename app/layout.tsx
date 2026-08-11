@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Manrope } from "next/font/google";
 import { assetPath } from "./lib/asset-path";
+import { businessContacts, siteDescription, siteName, siteUrl } from "./lib/site";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -13,24 +14,29 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site";
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Next Level Marketing & Communications",
+    default: siteName,
     template: "%s | Next Level Marketing",
   },
-  description:
-    "More than 20 years connecting ambitious brands, institutions, and communities with the audiences that matter across Ethiopia.",
+  description: siteDescription,
+  applicationName: siteName,
+  authors: [{ name: siteName }],
+  creator: siteName,
+  publisher: siteName,
+  category: "Marketing and communications",
+  keywords: ["marketing Ethiopia", "communications Ethiopia", "sports marketing", "brand activation", "media production", "distribution"],
   icons: { icon: assetPath("/favicon.png"), shortcut: assetPath("/favicon.png") },
   openGraph: {
-    title: "Next Level Marketing & Communications",
+    title: siteName,
     description:
       "Strategy, communication, promotion, production, events, and distribution for the Ethiopian market.",
     type: "website",
     locale: "en_ET",
-    images: [{ url: assetPath("/og.png"), width: 1735, height: 907, alt: "Next Level Marketing & Communications" }],
+    url: siteUrl,
+    siteName,
+    images: [{ url: assetPath("/og.png"), width: 1735, height: 907, alt: siteName }],
   },
   twitter: {
     card: "summary_large_image",
@@ -45,9 +51,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationData = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: siteName,
+    url: siteUrl,
+    logo: new URL(assetPath("/favicon.png"), siteUrl).toString(),
+    image: new URL(assetPath("/og.png"), siteUrl).toString(),
+    description: siteDescription,
+    foundingDate: "2006",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Addis Ababa",
+      addressCountry: "ET",
+    },
+    areaServed: ["Ethiopia", "International"],
+    email: businessContacts.emails[1],
+    telephone: businessContacts.phones[0],
+    sameAs: [businessContacts.instagram, businessContacts.tiktok],
+  };
+
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${manrope.variable}`}>{children}</body>
+      <body className={`${dmSans.variable} ${manrope.variable}`}>
+        {children}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }} />
+      </body>
     </html>
   );
 }

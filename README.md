@@ -37,4 +37,21 @@ npm run build
 - Vinext and Vite
 - Cloudflare-compatible build output
 
+## Production readiness
+
+- Security headers are applied by the production worker.
+- `/api/health` provides a no-cache availability check.
+- `robots.txt`, `sitemap.xml`, organization structured data, and social metadata support search and link previews.
+- Custom not-found and recovery pages keep failures inside the branded experience.
+- Production dependencies are checked with `npm audit --omit=dev`.
+
+## Before the final domain launch
+
+- Set `NEXT_PUBLIC_SITE_URL` to the final public domain before building.
+- Connect the final domain and verify its HTTPS certificate.
+- Decide whether project enquiries remain email-based or move to a personal-data system hosted in an approved location.
+- If a form is introduced, approve the privacy notice, retention period, team access, and notification workflow before collecting submissions.
+- Add analytics only after choosing a provider and approving the consent approach.
+- Recheck every phone number, email address, social link, case-study claim, logo, and image permission.
+
 All brand names, photographs, logos, and campaign materials remain the property of their respective owners and are presented as part of Next Level Marketing & Communications' company experience.

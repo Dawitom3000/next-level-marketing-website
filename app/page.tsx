@@ -4,27 +4,24 @@ import { CampaignGallery } from "./components/CampaignGallery";
 import { LogoCarousel } from "./components/LogoCarousel";
 import { experienceLogos } from "./data/experience";
 import { assetPath } from "./lib/asset-path";
+import { HeroVideo } from "./components/HeroVideo";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <section className="hero hero-video section-dark">
-          <div className="hero-media" aria-hidden="true">
-            <video autoPlay muted loop playsInline preload="metadata" poster={assetPath("/images/next-level-hero-poster.jpg")} tabIndex={-1}>
-              <source src={assetPath("/videos/next-level-hero-reel.mp4")} type="video/mp4" />
-            </video>
-          </div>
+          <HeroVideo />
           <div className="hero-grid shell">
             <div className="hero-copy reveal">
-              <p className="eyebrow light"><i className="live-dot" /> Addis Ababa · Ethiopia · Since 2006</p>
+              <p className="eyebrow light">Addis Ababa · Ethiopia · Since 2006</p>
               <h1>We move brands <em>through culture.</em></h1>
               <p className="hero-lede">
                 Strategy, communication, promotion, production, events, and distribution. More than 20 years of Ethiopian market experience connects it all.
               </p>
               <div className="button-row">
-                <Link className="button button-primary" href="/work">See what we move <span>↗</span></Link>
+                <Link className="button button-primary" href="/work">Explore our work <span aria-hidden="true">↗</span></Link>
                 <Link className="button button-ghost" href="/contact">Start a project</Link>
               </div>
             </div>
@@ -51,7 +48,7 @@ export default function Home() {
         <section className="section shell manifesto">
           <p className="eyebrow">Our point of view</p>
           <p className="manifesto-copy">People act on messages they understand and trust. <span>Local knowledge makes the difference.</span> We connect strategy with practical market delivery.</p>
-          <Link className="text-link" href="/about">The Next Level story <span>↗</span></Link>
+          <Link className="text-link" href="/about">The Next Level story <span aria-hidden="true">↗</span></Link>
         </section>
 
         <section className="section work-showcase section-dark">
@@ -63,14 +60,14 @@ export default function Home() {
               </div>
               <div className="results-heading-side">
                 <p>A selection of assignments showing the challenge, Next Level&apos;s role, and the result delivered.</p>
-                <Link className="text-link light-link" href="/work">Explore every case <span>↗</span></Link>
+                <Link className="text-link light-link" href="/work">Explore every case <span aria-hidden="true">↗</span></Link>
               </div>
             </div>
 
             <div className="results-editorial" aria-label="Selected project results">
               <Link href="/work#ethio-ballers" className="result-case result-featured">
                 <div className="result-media">
-                  <img src={assetPath("/images/summer-camp.jpg")} alt="Coach Carlos with guests at an Ethio Ballers summer camp" />
+                  <img src={assetPath("/images/summer-camp.jpg")} alt="Coach Carlos with guests at an Ethio Ballers summer camp" loading="lazy" decoding="async" />
                   <span className="result-index">01</span>
                 </div>
                 <div className="result-content">
@@ -84,16 +81,16 @@ export default function Home() {
                   <div className="result-scope" aria-label="Next Level role">
                     <span>Parent communication</span><span>School partnerships</span><span>Event delivery</span>
                   </div>
-                  <b className="result-link">Read the full case <span>↗</span></b>
+                  <b className="result-link">Read the full case <span aria-hidden="true">↗</span></b>
                 </div>
               </Link>
 
               <div className="result-pair">
                 <Link href="/work#and1" className="result-case result-standard">
                   <div className="result-media">
-                    <img src={assetPath("/images/basketball-award-presentation.jpg")} alt="Coach Carlos presenting an award during an international basketball event" />
+                    <img src={assetPath("/images/basketball-award-presentation.jpg")} alt="Coach Carlos presenting an award during an international basketball event" loading="lazy" decoding="async" />
                     <span className="result-index">02</span>
-                    <span className="result-brand-mark"><img src={assetPath("/logos/and1.png")} alt="AND1" /></span>
+                    <span className="result-brand-mark"><img src={assetPath("/logos/and1.png")} alt="AND1" loading="lazy" decoding="async" /></span>
                   </div>
                   <div className="result-content">
                     <p className="result-meta">International sports marketing · 2008 &amp; 2010</p>
@@ -101,13 +98,13 @@ export default function Home() {
                     <div className="result-lead"><strong>2</strong><span>International tours delivered</span></div>
                     <p className="result-summary">Next Level managed the Ethiopian side of both visits, connecting promotion, sponsors, media, venues, guest handling, logistics, and live event operations.</p>
                     <div className="result-scope"><span>Campaign strategy</span><span>Event operations</span><span>Media relations</span></div>
-                    <b className="result-link">Read the full case <span>↗</span></b>
+                    <b className="result-link">Read the full case <span aria-hidden="true">↗</span></b>
                   </div>
                 </Link>
 
                 <Link href="/work#tasties" className="result-case result-standard">
                   <div className="result-media">
-                    <img src={assetPath("/images/campaigns/tasty-foods.jpeg")} alt="Coach Carlos speaking during a Tasties sports campaign" />
+                    <img src={assetPath("/images/campaigns/tasty-foods.jpeg")} alt="Coach Carlos speaking during a Tasties sports campaign" loading="lazy" decoding="async" />
                     <span className="result-index">03</span>
                   </div>
                   <div className="result-content">
@@ -116,23 +113,23 @@ export default function Home() {
                     <div className="result-lead"><strong>4</strong><span>Cities reached through distribution</span></div>
                     <p className="result-summary">Promotion and physical availability worked together across Addis Ababa, Bahir Dar, Hawassa, and Jimma to build sustained recognition.</p>
                     <div className="result-scope"><span>Direct distribution</span><span>Field promotion</span><span>Event sponsorship</span></div>
-                    <b className="result-link">Read the full case <span>↗</span></b>
+                    <b className="result-link">Read the full case <span aria-hidden="true">↗</span></b>
                   </div>
                 </Link>
               </div>
 
               <Link href="/work#documentary" className="result-case result-wide">
                 <div className="result-media">
-                  <img src={assetPath("/images/us-embassy-documentary-meeting.jpg")} alt="Next Level representatives following a meeting at the U.S. Embassy" />
+                  <img src={assetPath("/images/us-embassy-documentary-meeting.jpg")} alt="Next Level representatives following a meeting at the U.S. Embassy" loading="lazy" decoding="async" />
                   <span className="result-index">04</span>
                 </div>
                 <div className="result-content">
                   <p className="result-meta">Documentary and stakeholder communication · 2025</p>
                   <h3>20 Years of Excellence</h3>
-                  <div className="result-outcome"><small>Recorded outcome</small><strong>U.S. Embassy meeting secured</strong></div>
+                  <div className="result-outcome"><strong>U.S. Embassy meeting secured</strong></div>
                   <p className="result-summary">Next Level independently funded and produced the basketball documentary, then used it with additional proposals to create recognition and open a conversation about future community support.</p>
                   <div className="result-scope"><span>Documentary strategy</span><span>Production</span><span>Diplomatic communication</span></div>
-                  <b className="result-link">Read the full case <span>↗</span></b>
+                  <b className="result-link">Read the full case <span aria-hidden="true">↗</span></b>
                 </div>
               </Link>
             </div>
@@ -142,11 +139,11 @@ export default function Home() {
         <section className="section section-sand capability-home">
           <div className="shell">
             <div className="section-heading">
-              <div><p className="eyebrow">Connected capabilities</p><h2>Strategy, communication, and delivery in one team.</h2></div>
+              <div><p className="eyebrow">Connected capabilities</p><h2>Strategy and delivery in one team.</h2></div>
               <p>We connect strategic thinking with the communication, partnerships, production, events, and distribution needed to make work land.</p>
             </div>
             <ServiceGrid compact />
-            <Link className="button button-dark service-button" href="/services">Explore our capabilities <span>↗</span></Link>
+            <Link className="button button-dark service-button" href="/services">Explore our capabilities <span aria-hidden="true">↗</span></Link>
           </div>
         </section>
 

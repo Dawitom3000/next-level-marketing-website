@@ -1,7 +1,6 @@
 import vinext from "vinext";
 import { defineConfig } from "vite";
-import hostingConfig from "./.openai/hosting.json";
-import { sites } from "./build/sites-vite-plugin";
+import hostingConfig from "./.openai/hosting.json" with { type: "json" };
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   "00000000-0000-4000-8000-000000000000";
@@ -34,6 +33,22 @@ const localBindingConfig = {
 };
 
 export default defineConfig(async () => {
+  const isVercelBuild =
+    process.env.DEPLOY_TARGET === "vercel" || process.env.VERCEL === "1";
+
+  if (isVercelBuild) {
+    const [{ nitro }, { default: tailwindcss }] = await Promise.all([
+      import("nitro/vite"),
+      import("@tailwindcss/vite"),
+    ]);
+    return {
+      // Vite's Tailwind plugin handles the package import directly; skip the
+      // Next/PostCSS pipeline in this Vite-only build.
+      css: { postcss: { plugins: [] } },
+      plugins: [tailwindcss(), vinext(), nitro()],
+    };
+  }
+
   // Keep Wrangler and Miniflare state project-local. These are non-secret tool
   // settings; application environment belongs in ignored `.env*` files.
   process.env.WRANGLER_WRITE_LOGS ??= "false";
@@ -41,7 +56,10 @@ export default defineConfig(async () => {
   process.env.MINIFLARE_REGISTRY_PATH ??= ".wrangler/registry";
 
   // Wrangler snapshots its log path while the Cloudflare plugin is imported.
-  const { cloudflare } = await import("@cloudflare/vite-plugin");
+  const [{ cloudflare }, { sites }] = await Promise.all([
+    import("@cloudflare/vite-plugin"),
+    import("./build/sites-vite-plugin.ts"),
+  ]);
 
   return {
     server: isCodexSeatbeltSandbox

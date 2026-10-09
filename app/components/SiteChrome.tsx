@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { assetPath } from "../lib/asset-path";
+import { SiteNavigation } from "./SiteNavigation";
 
 const services = [
   ["01", "Marketing strategy", "Audience insight, positioning, campaign planning, and plans for entering new markets."],
   ["02", "Brand activation", "Promotions, launches, sponsorships, and experiences that create participation."],
   ["03", "Strategic communications", "Messaging, public relations, stakeholder engagement, and media coordination."],
-  ["04", "Media production", "Documentaries, interviews, campaign content, and production deployment."],
+  ["04", "Media production", "Documentaries, interviews, campaign content, and production coordination."],
   ["05", "Events & press", "Press conferences, tournaments, launches, and complete event delivery."],
   ["06", "Distribution support", "Retail reach, visibility, field coordination, and local product distribution."],
 ];
@@ -27,23 +28,7 @@ export function Header() {
           <span className="logo-mark"><b>N</b><b>L</b></span>
           <span>Next Level<small>Marketing + Communications</small></span>
         </Link>
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          <Link href="/work">Work</Link>
-          <Link href="/services">Capabilities</Link>
-          <Link href="/experience">Experience</Link>
-          <Link href="/about">About</Link>
-          <Link className="nav-cta" href="/contact"><i /> Start a project <span>↗</span></Link>
-        </nav>
-        <details className="mobile-menu">
-          <summary aria-label="Open navigation">Menu</summary>
-          <nav>
-            <Link href="/work">Work</Link>
-            <Link href="/services">Capabilities</Link>
-            <Link href="/experience">Experience</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Start a project</Link>
-          </nav>
-        </details>
+        <SiteNavigation />
       </div>
     </header>
   );
@@ -57,8 +42,8 @@ export function Footer() {
           <Link className="logo logo-footer" href="/"><span className="logo-mark"><b>N</b><b>L</b></span><span>Next Level<small>Marketing + Communications</small></span></Link>
           <p>Market intelligence, creative communication, and accountable execution. Built in Ethiopia.</p>
         </div>
-        <div><h4>Navigate</h4><Link href="/about">About</Link><Link href="/services">Services</Link><Link href="/work">Work</Link><Link href="/experience">Experience</Link><Link href="/contact">Contact</Link><a href="/sitemap.xml">Sitemap</a></div>
-        <div><h4>Talk to us</h4><a href="tel:+251911998000">+251 911 998 000</a><a href="tel:+251970437830">+251 970 437 830</a><a href="mailto:carlos2thornton@yahoo.com">carlos2thornton@yahoo.com</a><a href="mailto:felekedawit11@gmail.com">felekedawit11@gmail.com</a></div>
+        <div><h4>Navigate</h4><Link href="/events">Projects</Link><Link href="/about">About</Link><Link href="/services">Capabilities</Link><Link href="/work">Work</Link><Link href="/experience">Experience</Link><Link href="/contact">Contact</Link></div>
+        <div><h4>Talk to us</h4><a href="tel:+251911998000">+251 911 998 000</a><a href="tel:+251970437830">+251 970 437 830</a><a href="mailto:nextlevelmarketingcomm@gmail.com">nextlevelmarketingcomm<wbr />@gmail.com</a></div>
         <div><h4>Follow</h4><SocialLinks /><span>Addis Ababa, Ethiopia</span></div>
       </div>
       <div className="shell footer-bottom"><span>© 2026 Next Level Marketing.</span><span>More than 20 years of market experience.</span></div>
@@ -67,7 +52,7 @@ export function Footer() {
 }
 
 export function ServiceGrid({ compact = false }: { compact?: boolean }) {
-  return <div className={`service-grid ${compact ? "compact" : ""}`}>{services.map(([number, name, text]) => <article className="service-card" key={name}><span>{number}</span><div><h3>{name}</h3><p>{text}</p></div><b aria-hidden="true">↗</b></article>)}</div>;
+  return <div className={`service-grid ${compact ? "compact" : ""}`}>{services.map(([number, name, text]) => <article className="service-card" key={name}><span>{number}</span><div><h3>{name}</h3><p>{text}</p></div></article>)}</div>;
 }
 
 export function PageCta() {

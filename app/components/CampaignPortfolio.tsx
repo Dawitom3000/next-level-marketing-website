@@ -21,17 +21,17 @@ export function CampaignPortfolio() {
   );
 
   return <>
-    <div className="portfolio-filter" aria-label="Filter campaign portfolio by category">
+    <div className="portfolio-filter" role="group" aria-label="Filter campaign portfolio by category">
       {filters.map((filter) => {
         const category = filter.id === "all" ? null : filter.id;
         const count = category === null ? campaignProjects.length : campaignProjects.filter((project) => project.categories.includes(category)).length;
-        return <button type="button" key={filter.id} aria-pressed={active === filter.id} onClick={() => setActive(filter.id)}>
+        return <button type="button" key={filter.id} aria-pressed={active === filter.id} aria-controls="campaign-results" onClick={() => setActive(filter.id)}>
           <span>{filter.label}</span><b>{String(count).padStart(2, "0")}</b>
         </button>;
       })}
     </div>
     <p className="portfolio-result" aria-live="polite">Showing {visibleProjects.length} {visibleProjects.length === 1 ? "project" : "projects"}</p>
-    <div className="campaign-project-grid">
+    <div className="campaign-project-grid" id="campaign-results">
       {visibleProjects.map((project) => {
         const originalIndex = campaignProjects.findIndex((item) => item.id === project.id);
         return <article className="campaign-project-card" id={project.id} key={project.id}>

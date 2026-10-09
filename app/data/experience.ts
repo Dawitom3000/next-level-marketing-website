@@ -5,6 +5,7 @@ export type ExperienceLogo = {
   src: string;
   sector: string;
   note: string;
+  alt?: string;
   featured?: boolean;
 };
 
@@ -25,26 +26,5 @@ export const experienceLogos: ExperienceLogo[] = [
   { name: "Nahoo TV", src: assetPath("/logos/nahoo-tv.png"), sector: "Media", note: "Broadcast & production partner", featured: true },
   { name: "Metropolitan Real Estate", src: assetPath("/logos/metropolitan.png"), sector: "Real estate", note: "Event sponsor", featured: true },
   { name: "Tripolla Luxury Travel Co.", src: assetPath("/logos/tripolla.jpeg"), sector: "Travel", note: "Event partner", featured: true },
-];
-
-export const awaitingArtwork = [
-  "Ambo Mineral Water",
-  "Ambo Flavoured Drink",
-  "Kaldi’s Coffee",
-  "Tasties snack",
-  "Crunchips",
-  "Enrich Foods PLC",
-  "Enrich Cornflakes",
-  "Mix Max Chips",
-  "Al Hassan Food PLC",
-  "Lolly Polly",
-  "Kakakit",
-  "Latar",
-  "Becker Biscuits",
-  "Dan Technology PLC",
-  "Lucy Taxi",
-  "Blue Birds Hotel",
-  "Ethiopian Basketball Federation",
-  "Coach Carlos Thornton Sports Enrichment Center",
-  "Bina Addis Tour & Travel",
+  { name: "Ethiopian Diaspora Service", src: assetPath("/logos/ethiopian-diaspora-service.png"), sector: "Government", note: "Two-year partnership", alt: "FDRE Ministry of Foreign Affairs — Ethiopian Diaspora Service logo", featured: true },
 ];

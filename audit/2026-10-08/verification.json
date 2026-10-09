@@ -1,0 +1,805 @@
+{
+  "date": "2026-10-08",
+  "scope": "Seven public routes; source inspection plus rendered Chromium viewport and representative interaction checks.",
+  "responsive": [
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/",
+      "clipped": [],
+      "currentNav": [],
+      "forms": 0,
+      "h1": 1,
+      "height": 1080,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site",
+      "overflow": [],
+      "pageWidth": 1920,
+      "path": "/",
+      "smallText": [],
+      "title": "Next Level Marketing & Communications",
+      "width": 1920
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/events",
+      "clipped": [],
+      "currentNav": [
+        "Projects"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 1080,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/events",
+      "overflow": [],
+      "pageWidth": 1920,
+      "path": "/events",
+      "smallText": [],
+      "title": "Projects | Next Level Marketing",
+      "width": 1920
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/work",
+      "clipped": [],
+      "currentNav": [
+        "Work"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 1080,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/work",
+      "overflow": [],
+      "pageWidth": 1920,
+      "path": "/work",
+      "smallText": [],
+      "title": "Selected Work | Next Level Marketing",
+      "width": 1920
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/services",
+      "clipped": [],
+      "currentNav": [
+        "Capabilities"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 1080,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/services",
+      "overflow": [],
+      "pageWidth": 1920,
+      "path": "/services",
+      "smallText": [],
+      "title": "Capabilities | Next Level Marketing",
+      "width": 1920
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/experience",
+      "clipped": [],
+      "currentNav": [
+        "Experience"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 1080,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/experience",
+      "overflow": [],
+      "pageWidth": 1920,
+      "path": "/experience",
+      "smallText": [],
+      "title": "Experience | Next Level Marketing",
+      "width": 1920
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/about",
+      "clipped": [],
+      "currentNav": [
+        "About"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 1080,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/about",
+      "overflow": [],
+      "pageWidth": 1920,
+      "path": "/about",
+      "smallText": [],
+      "title": "About | Next Level Marketing",
+      "width": 1920
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/contact",
+      "clipped": [],
+      "currentNav": [
+        "Start a project↗"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 1080,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/contact",
+      "overflow": [],
+      "pageWidth": 1920,
+      "path": "/contact",
+      "smallText": [],
+      "title": "Contact | Next Level Marketing",
+      "width": 1920
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/",
+      "clipped": [],
+      "currentNav": [],
+      "forms": 0,
+      "h1": 1,
+      "height": 768,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site",
+      "overflow": [],
+      "pageWidth": 1366,
+      "path": "/",
+      "smallText": [],
+      "title": "Next Level Marketing & Communications",
+      "width": 1366
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/events",
+      "clipped": [],
+      "currentNav": [
+        "Projects"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 768,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/events",
+      "overflow": [],
+      "pageWidth": 1366,
+      "path": "/events",
+      "smallText": [],
+      "title": "Projects | Next Level Marketing",
+      "width": 1366
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/work",
+      "clipped": [],
+      "currentNav": [
+        "Work"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 768,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/work",
+      "overflow": [],
+      "pageWidth": 1366,
+      "path": "/work",
+      "smallText": [],
+      "title": "Selected Work | Next Level Marketing",
+      "width": 1366
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/services",
+      "clipped": [],
+      "currentNav": [
+        "Capabilities"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 768,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/services",
+      "overflow": [],
+      "pageWidth": 1366,
+      "path": "/services",
+      "smallText": [],
+      "title": "Capabilities | Next Level Marketing",
+      "width": 1366
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/experience",
+      "clipped": [],
+      "currentNav": [
+        "Experience"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 768,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/experience",
+      "overflow": [],
+      "pageWidth": 1366,
+      "path": "/experience",
+      "smallText": [],
+      "title": "Experience | Next Level Marketing",
+      "width": 1366
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/about",
+      "clipped": [],
+      "currentNav": [
+        "About"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 768,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/about",
+      "overflow": [],
+      "pageWidth": 1366,
+      "path": "/about",
+      "smallText": [],
+      "title": "About | Next Level Marketing",
+      "width": 1366
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/contact",
+      "clipped": [],
+      "currentNav": [
+        "Start a project↗"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 768,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/contact",
+      "overflow": [],
+      "pageWidth": 1366,
+      "path": "/contact",
+      "smallText": [],
+      "title": "Contact | Next Level Marketing",
+      "width": 1366
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/",
+      "clipped": [],
+      "currentNav": [],
+      "forms": 0,
+      "h1": 1,
+      "height": 1024,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site",
+      "overflow": [],
+      "pageWidth": 768,
+      "path": "/",
+      "smallText": [],
+      "title": "Next Level Marketing & Communications",
+      "width": 768
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/events",
+      "clipped": [],
+      "currentNav": [
+        "Projects"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 1024,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/events",
+      "overflow": [],
+      "pageWidth": 768,
+      "path": "/events",
+      "smallText": [],
+      "title": "Projects | Next Level Marketing",
+      "width": 768
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/work",
+      "clipped": [],
+      "currentNav": [
+        "Work"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 1024,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/work",
+      "overflow": [],
+      "pageWidth": 768,
+      "path": "/work",
+      "smallText": [],
+      "title": "Selected Work | Next Level Marketing",
+      "width": 768
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/services",
+      "clipped": [],
+      "currentNav": [
+        "Capabilities"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 1024,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/services",
+      "overflow": [],
+      "pageWidth": 768,
+      "path": "/services",
+      "smallText": [],
+      "title": "Capabilities | Next Level Marketing",
+      "width": 768
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/experience",
+      "clipped": [],
+      "currentNav": [
+        "Experience"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 1024,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/experience",
+      "overflow": [],
+      "pageWidth": 768,
+      "path": "/experience",
+      "smallText": [],
+      "title": "Experience | Next Level Marketing",
+      "width": 768
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/about",
+      "clipped": [],
+      "currentNav": [
+        "About"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 1024,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/about",
+      "overflow": [],
+      "pageWidth": 768,
+      "path": "/about",
+      "smallText": [],
+      "title": "About | Next Level Marketing",
+      "width": 768
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/contact",
+      "clipped": [],
+      "currentNav": [
+        "Start a project"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 1024,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/contact",
+      "overflow": [],
+      "pageWidth": 768,
+      "path": "/contact",
+      "smallText": [],
+      "title": "Contact | Next Level Marketing",
+      "width": 768
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/",
+      "clipped": [],
+      "currentNav": [],
+      "forms": 0,
+      "h1": 1,
+      "height": 844,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site",
+      "overflow": [],
+      "pageWidth": 390,
+      "path": "/",
+      "smallText": [],
+      "title": "Next Level Marketing & Communications",
+      "width": 390
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/events",
+      "clipped": [],
+      "currentNav": [
+        "Projects"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 844,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/events",
+      "overflow": [],
+      "pageWidth": 390,
+      "path": "/events",
+      "smallText": [],
+      "title": "Projects | Next Level Marketing",
+      "width": 390
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/work",
+      "clipped": [],
+      "currentNav": [
+        "Work"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 844,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/work",
+      "overflow": [],
+      "pageWidth": 390,
+      "path": "/work",
+      "smallText": [],
+      "title": "Selected Work | Next Level Marketing",
+      "width": 390
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/services",
+      "clipped": [],
+      "currentNav": [
+        "Capabilities"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 844,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/services",
+      "overflow": [],
+      "pageWidth": 390,
+      "path": "/services",
+      "smallText": [],
+      "title": "Capabilities | Next Level Marketing",
+      "width": 390
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/experience",
+      "clipped": [],
+      "currentNav": [
+        "Experience"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 844,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/experience",
+      "overflow": [],
+      "pageWidth": 390,
+      "path": "/experience",
+      "smallText": [],
+      "title": "Experience | Next Level Marketing",
+      "width": 390
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/about",
+      "clipped": [],
+      "currentNav": [
+        "About"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 844,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/about",
+      "overflow": [],
+      "pageWidth": 390,
+      "path": "/about",
+      "smallText": [],
+      "title": "About | Next Level Marketing",
+      "width": 390
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/contact",
+      "clipped": [],
+      "currentNav": [
+        "Start a project"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 844,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/contact",
+      "overflow": [],
+      "pageWidth": 390,
+      "path": "/contact",
+      "smallText": [],
+      "title": "Contact | Next Level Marketing",
+      "width": 390
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/",
+      "clipped": [],
+      "currentNav": [],
+      "forms": 0,
+      "h1": 1,
+      "height": 568,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site",
+      "overflow": [],
+      "pageWidth": 320,
+      "path": "/",
+      "smallText": [],
+      "title": "Next Level Marketing & Communications",
+      "width": 320
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/events",
+      "clipped": [],
+      "currentNav": [
+        "Projects"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 568,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/events",
+      "overflow": [],
+      "pageWidth": 320,
+      "path": "/events",
+      "smallText": [],
+      "title": "Projects | Next Level Marketing",
+      "width": 320
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/work",
+      "clipped": [],
+      "currentNav": [
+        "Work"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 568,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/work",
+      "overflow": [],
+      "pageWidth": 320,
+      "path": "/work",
+      "smallText": [],
+      "title": "Selected Work | Next Level Marketing",
+      "width": 320
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/services",
+      "clipped": [],
+      "currentNav": [
+        "Capabilities"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 568,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/services",
+      "overflow": [],
+      "pageWidth": 320,
+      "path": "/services",
+      "smallText": [],
+      "title": "Capabilities | Next Level Marketing",
+      "width": 320
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/experience",
+      "clipped": [],
+      "currentNav": [
+        "Experience"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 568,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/experience",
+      "overflow": [],
+      "pageWidth": 320,
+      "path": "/experience",
+      "smallText": [],
+      "title": "Experience | Next Level Marketing",
+      "width": 320
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/about",
+      "clipped": [],
+      "currentNav": [
+        "About"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 568,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/about",
+      "overflow": [],
+      "pageWidth": 320,
+      "path": "/about",
+      "smallText": [],
+      "title": "About | Next Level Marketing",
+      "width": 320
+    },
+    {
+      "canonical": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/contact",
+      "clipped": [],
+      "currentNav": [
+        "Start a project"
+      ],
+      "forms": 0,
+      "h1": 1,
+      "height": 568,
+      "missingLoadedImages": [],
+      "ogUrl": "https://next-level-marketing-ethiopia.felekedawit11.chatgpt.site/contact",
+      "overflow": [],
+      "pageWidth": 320,
+      "path": "/contact",
+      "smallText": [],
+      "title": "Contact | Next Level Marketing",
+      "width": 320
+    }
+  ],
+  "linksAndAssets": {
+    "assets": 61,
+    "brokenHash": [],
+    "forms": [
+      {
+        "count": 0,
+        "p": "/"
+      },
+      {
+        "count": 0,
+        "p": "/events"
+      },
+      {
+        "count": 0,
+        "p": "/work"
+      },
+      {
+        "count": 0,
+        "p": "/services"
+      },
+      {
+        "count": 0,
+        "p": "/experience"
+      },
+      {
+        "count": 0,
+        "p": "/about"
+      },
+      {
+        "count": 0,
+        "p": "/contact"
+      }
+    ],
+    "internalPaths": [
+      {
+        "path": "/",
+        "status": 200
+      },
+      {
+        "path": "/events",
+        "status": 200
+      },
+      {
+        "path": "/work",
+        "status": 200
+      },
+      {
+        "path": "/services",
+        "status": 200
+      },
+      {
+        "path": "/experience",
+        "status": 200
+      },
+      {
+        "path": "/about",
+        "status": 200
+      },
+      {
+        "path": "/contact",
+        "status": 200
+      }
+    ],
+    "missingAssets": [],
+    "pages": [
+      {
+        "p": "/",
+        "status": 200
+      },
+      {
+        "p": "/events",
+        "status": 200
+      },
+      {
+        "p": "/work",
+        "status": 200
+      },
+      {
+        "p": "/services",
+        "status": 200
+      },
+      {
+        "p": "/experience",
+        "status": 200
+      },
+      {
+        "p": "/about",
+        "status": 200
+      },
+      {
+        "p": "/contact",
+        "status": 200
+      }
+    ]
+  },
+  "portfolioFilters": [
+    {
+      "announcement": "Showing 14 projects",
+      "count": 14,
+      "filter": "All work14"
+    },
+    {
+      "announcement": "Showing 5 projects",
+      "count": 5,
+      "filter": "Partners05"
+    },
+    {
+      "announcement": "Showing 10 projects",
+      "count": 10,
+      "filter": "Sports marketing10"
+    },
+    {
+      "announcement": "Showing 4 projects",
+      "count": 4,
+      "filter": "ATL marketing04"
+    },
+    {
+      "announcement": "Showing 10 projects",
+      "count": 10,
+      "filter": "BTL marketing10"
+    },
+    {
+      "announcement": "Showing 9 projects",
+      "count": 9,
+      "filter": "Advertising09"
+    }
+  ],
+  "motionChecks": [
+    {
+      "label": "Play background video",
+      "paused": true,
+      "time": 3.59362
+    },
+    {
+      "label": "Pause background video",
+      "paused": false,
+      "time": 3.677058
+    },
+    {
+      "animation": "running",
+      "label": "Pause client logos",
+      "paused": "false"
+    },
+    {
+      "animation": "paused",
+      "label": "Play client logos",
+      "paused": "true"
+    }
+  ],
+  "reducedMotion": {
+    "method": "Local browser simulation of CSS media rules and matchMedia branch; no native OS preference emulation available.",
+    "result": {
+      "controlsDisplay": [
+        "none",
+        "none"
+      ],
+      "duplicateDisplay": "none",
+      "logoAnimation": "none",
+      "scroll": "auto",
+      "simulation": true,
+      "videoDisplay": "none",
+      "videoPaused": true
+    }
+  },
+  "evidence": {
+    "bottleDesktop": "/Users/dawitfeleke/.t3/userdata/browser-artifacts/browser-screenshot-localhost-muzhg3kt-c7308d88.png",
+    "bottleMobile": "/Users/dawitfeleke/.t3/userdata/browser-artifacts/browser-screenshot-localhost-muzhg435-2c660952.png",
+    "contactMobile": "/Users/dawitfeleke/.t3/userdata/browser-artifacts/browser-screenshot-localhost-muzhlc31-aba6f7d9.png",
+    "menuSmallMobile": "/Users/dawitfeleke/.t3/userdata/browser-artifacts/browser-screenshot-localhost-muzhg4cz-e465b650.png",
+    "portfolio": "/Users/dawitfeleke/.t3/userdata/browser-artifacts/browser-screenshot-localhost-muzhh3ah-76dd859a.png",
+    "gallery": "/Users/dawitfeleke/.t3/userdata/browser-artifacts/browser-screenshot-localhost-muzhhx5y-c61a203d.png"
+  },
+  "limitations": [
+    "No physical devices, Safari, Firefox, screen reader, or formal WCAG certification tested.",
+    "Email, phone, and WhatsApp destinations inspected without contacting anyone; native mail handling and delivery are not verified.",
+    "Browser host disconnected after the completed matrix and representative section checks; further detail screenshots were unavailable.",
+    "No Lighthouse or real-user performance data collected.",
+    "Network diagnostics include cancelled video loads during navigation and HEAD requests despite successful status responses; these were not treated as missing assets."
+  ]
+}

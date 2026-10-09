@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "../lib/site";
 import { Footer, Header, InnerHero, PageCta } from "../components/SiteChrome";
 import { assetPath } from "../lib/asset-path";
 import { CampaignPortfolio } from "../components/CampaignPortfolio";
 
-export const metadata: Metadata = { title: "Selected Work", description: "Case studies spanning sports marketing, television, documentary production, and product distribution." };
+export const metadata: Metadata = pageMetadata({ title: "Selected Work", description: "Case studies spanning sports marketing, television, documentary production, and product distribution.", path: "/work" });
 
 const cases = [
   {
@@ -13,10 +14,10 @@ const cases = [
     image: "/logos/and1.png",
     imageClass: "work-photo-logo work-photo-and1",
     proof: "2 international tours",
-    summary: "Two separate assignments that required Next Level to translate a global streetball property into locally relevant, professionally delivered Ethiopian events.",
-    context: "The opportunity went beyond advertising a visiting team. Each tour needed an audience, credible local partners, effective media attention, suitable venues, and a coordinated experience for both the international guests and Ethiopian basketball fans.",
-    work: "Next Level worked directly with the AND1 team and managed the Ethiopian side of both visits. The scope brought together campaign planning, promotion, sponsor coordination, public communication, venue preparation, media activity, event operations, guest handling, and local logistics. The 2008 and 2010 visits were planned and delivered as separate campaigns, allowing the approach to respond to the needs of each tour.",
-    outcome: "The two visits connected an internationally recognized basketball brand with local audiences while demonstrating Next Level’s ability to coordinate complex sports properties across communication, operations, partnerships, and live experience.",
+    summary: "Promotion and event delivery for AND1’s two visits to Ethiopia in 2008 and 2010.",
+    context: "Each tour needed local partners, media coverage, venues, and coordinated arrangements for the visiting team and Ethiopian basketball fans.",
+    work: "Next Level worked directly with AND1, managing promotion, sponsors, media relations, venue preparation, guest arrangements, and local logistics. The two visits were planned and delivered as separate campaigns.",
+    outcome: "Both tours brought AND1 to Ethiopian audiences through coordinated campaigns and live events.",
     services: ["Campaign strategy", "Sponsorship", "Media relations", "Venue & logistics", "Event operations"],
   },
   {
@@ -25,10 +26,10 @@ const cases = [
     title: "Ethio Ballers Summer Camp",
     image: "/images/summer-camp.jpg",
     proof: "10+ year partnership",
-    summary: "A long running youth sports platform built through consistent promotion, parent communication, venue partnerships, and annual event delivery.",
-    context: "Summer camps must earn the confidence of parents while remaining exciting and relevant to students. The task has therefore been both promotional and operational: explain the value of the program, reach families at the right time, and support a dependable experience year after year.",
-    work: "For more than a decade, Next Level has supported the organization and promotion of Ethio Ballers Summer Camp. Work has included audience outreach, campaign communication, event visibility, partner coordination, and the use of international school venues. Those venue relationships gave the camps professional settings while also introducing participating schools to hundreds of families without separate school promotion campaigns.",
-    outcome: "The partnership has developed into a durable annual platform. Across the wider summer camp program, participation has averaged more than 500 students per year for over five years. This reflects sustained parent trust and strong market recognition.",
+    summary: "More than a decade of promotion, parent communication, school partnerships, and annual camp delivery.",
+    context: "The camp needed to reach families, explain its programme to parents, and provide a dependable experience for students each year.",
+    work: "Next Level has supported camp organization and promotion for more than a decade, handling outreach, parent communication, partners, and international school venues. The venue partnerships also introduced the host schools to participating families.",
+    outcome: "Across the wider summer camp programme, participation has averaged more than 500 students per year for over five years.",
     services: ["Audience outreach", "Parent communications", "School partnerships", "Venue activation", "Event promotion"],
   },
   {
@@ -37,10 +38,10 @@ const cases = [
     title: "The Coach Carlos Show",
     image: "/images/coach-carlos-show.jpg",
     proof: "Culture on screen",
-    summary: "An interview and culture platform designed to connect sport with the people, ideas, and achievements shaping Ethiopia.",
-    context: "The program needed to feel broader than a conventional sports show. Its role was to create thoughtful public conversations while giving audiences access to respected athletes, artists, entrepreneurs, and cultural figures.",
-    work: "Next Level supported program development, guest outreach, scheduling, interview preparation, location coordination, filming, and the communication surrounding each production. Nahoo TV served as broadcaster and production partner. Blue Birds Hotel supported the project as a sponsor and provided a venue for filming, helping the team create a consistent production environment.",
-    outcome: "The resulting platform brought together prominent Ethiopian and international voices, including Haile Gebrselassie, Betty G, Girum Ermias, Ras Johnny, and many others. It also extended Next Level’s work from live promotion into recurring media production and storytelling built through relationships.",
+    summary: "An interview programme featuring athletes, artists, entrepreneurs, and cultural figures.",
+    context: "The show brought conversations about sport, culture, and achievement to a wider television audience.",
+    work: "Next Level coordinated programme development, guests, interviews, locations, filming, and publicity. Nahoo TV was the broadcaster and production partner; Blue Birds Hotel sponsored the project and provided a filming venue.",
+    outcome: "Guests included Haile Gebrselassie, Betty G, Girum Ermias, and Ras Johnny. The programme extended Next Level’s work into recurring television production.",
     services: ["Program development", "Guest coordination", "Interview production", "Location management", "Broadcast partnership"],
   },
   {
@@ -49,11 +50,11 @@ const cases = [
     title: "20 Years of Excellence",
     image: "/images/us-embassy-documentary-meeting.jpg",
     imageClass: "work-photo-portrait",
-    proof: "Recognition unlocked",
-    summary: "Next Level funded this basketball documentary and used it as a strategic communication tool for recognition, relationship development, and future opportunity.",
-    context: "Ethiopian basketball needed a clearer story for international stakeholders. The documentary demonstrated the work already happening, made local potential visible, and opened more serious conversations about scouting and community support.",
-    work: "Next Level led the communication, production, and deployment of the documentary and funded the project independently. After production, the team presented the film with additional proposals and managed the later communication. This turned the documentary into a practical asset for stakeholder engagement.",
-    outcome: "The engagement led to a meeting at the U.S. Embassy with Public Diplomacy Officer Ryan Brandon. The discussion brought recognition to the work and a willingness to explore support for future charity initiatives connected to youth and basketball.",
+    proof: "U.S. Embassy meeting",
+    summary: "An independently funded basketball documentary presented to international stakeholders alongside proposals for community support.",
+    context: "The film documented Ethiopian basketball and youth development work for international stakeholders considering scouting and community support.",
+    work: "Next Level independently funded and produced the documentary, presented it with additional proposals, and managed the subsequent stakeholder communication.",
+    outcome: "The presentation led to a meeting at the U.S. Embassy with Public Diplomacy Officer Ryan Brandon and a discussion of possible support for future youth and basketball charity initiatives.",
     services: ["Documentary strategy", "Production", "Stakeholder materials", "Proposal presentation", "Diplomatic communication"],
   },
   {
@@ -61,23 +62,23 @@ const cases = [
     tag: "Press relations & event communications · 2025",
     title: "20th Anniversary Press Conference",
     image: "/images/next-level-hero-poster.jpg",
-    proof: "Several partners",
-    summary: "A milestone event presented to media through coordinated messaging, partners, guests, and venue delivery.",
-    context: "The twentieth anniversary of the Coach Carlos Sports Enrichment Center called for more than a celebration. It was an opportunity to explain the history of the work, recognize the relationships behind it, and present the next chapter to media, partners, and invited stakeholders.",
-    work: "Next Level organized the press conference from communication planning through event delivery. The team coordinated the event narrative, invitations, speakers, press engagement, guest flow, and production details. Tripolla Tours participated as a collaborating partner, while Metropolitan Real Estate supported the occasion as a sponsor.",
-    outcome: "The event brought two decades of work into a focused public story and created a professional setting for partners, supporters, and media to engage with the organization’s history and future direction.",
+    proof: "20th anniversary",
+    summary: "A press conference marking 20 years of the Coach Carlos Sports Enrichment Center.",
+    context: "The anniversary brought the centre’s history and future plans to media, partners, and invited stakeholders.",
+    work: "Next Level organized messaging, invitations, speakers, press engagement, guests, and production. Tripolla Tours collaborated on the event, with sponsorship from Metropolitan Real Estate.",
+    outcome: "The press conference gave media and partners a shared setting to discuss the centre’s two decades of work and its next projects.",
     services: ["Press conference strategy", "Partner coordination", "Media invitations", "Guest management", "Event production"],
   },
   {
     id: "tasties",
     tag: "Product marketing & distribution",
     title: "Tasties Market Reach",
-    image: "/images/ras-johnny-interview.jpg",
+    image: "/images/campaigns/tasty-foods.jpeg",
     proof: "Distribution in 4 cities",
-    summary: "A product growth assignment where promotion and physical availability were managed together.",
-    context: "Building a snack brand requires more than awareness. Consumers must repeatedly see the product, find it in the market, and associate it with reliable quality. Tasties therefore needed both active promotion and dependable distribution.",
-    work: "Next Level served as a direct distributor for Tasties while also supporting market promotion and retail visibility. Distribution was concentrated in Addis Ababa and extended to Bahir Dar, Hawassa, and Jimma. Product presence was reinforced through consistent field activity and event sponsorship opportunities that placed the snack in front of relevant audiences.",
-    outcome: "The combined approach helped Tasties build sustained popularity and recognition. The product’s quality created repeat demand, while Next Level’s distribution and promotional consistency ensured that demand could be converted into real availability across four cities.",
+    summary: "Snack promotion and direct distribution across Addis Ababa, Bahir Dar, Hawassa, and Jimma.",
+    context: "Tasties needed product promotion backed by consistent availability in shops and local markets.",
+    work: "Next Level distributed Tasties in Addis Ababa, Bahir Dar, Hawassa, and Jimma, supported by retail promotion, field campaigns, and sports event sponsorship.",
+    outcome: "Promotion and distribution supported product recognition and availability across four cities.",
     services: ["Direct distribution", "Retail visibility", "Field promotion", "Event sponsorship", "Regional market reach"],
   },
 ];
@@ -91,23 +92,23 @@ const categoryLenses = [
 ];
 
 export default function WorkPage() {
-  return <><Header /><main>
-    <InnerHero variant="work" eyebrow="Selected work" title="Campaigns delivered in the market." intro="Projects across sports, media, communications, events, and distribution, with the work and outcomes clearly documented." />
+  return <><Header /><main id="main-content" tabIndex={-1}>
+    <InnerHero variant="work" eyebrow="Selected work" title="Campaigns delivered in the market." intro="Sports, media, communications, events, and product campaigns across Ethiopia and abroad." />
     <section className="section section-dark work-categories">
       <div className="shell">
-        <div className="section-heading category-heading"><div><p className="eyebrow light">How to explore our work</p><h2>Five areas of experience.</h2></div><p>Many assignments cross more than one category. Our role can include partnership, strategy, creative production, and field execution.</p></div>
+        <div className="section-heading category-heading"><div><p className="eyebrow light">Our practice</p><h2>Five areas of experience.</h2></div><p>Many assignments cross more than one category. Our role can include partnership, strategy, creative production, and field execution.</p></div>
         <div className="category-lens-grid">{categoryLenses.map((category) => <article key={category.number}>
           <span>{category.number}</span><h3>{category.title}</h3><p>{category.copy}</p><small>{category.examples}</small>
         </article>)}</div>
-        <a className="category-jump" href="#campaign-portfolio">Browse the categorized portfolio <span>↓</span></a>
+        <a className="category-jump" href="#campaign-portfolio">Browse campaigns <span>↓</span></a>
       </div>
     </section>
-    <section className="section shell work-list">{cases.map((item, index) => <article className="work-detail" id={item.id} key={item.id}><div className="work-number">0{index + 1}</div><div className={`work-photo ${item.imageClass ?? ""}`}><img src={assetPath(item.image)} alt={item.title} /><strong>{item.proof}</strong></div><div className="work-copy"><p className="eyebrow">{item.tag}</p><h2>{item.title}</h2><p className="work-summary">{item.summary}</p><div className="work-story"><section><h4>Context</h4><p>{item.context}</p></section><section><h4>Our work</h4><p>{item.work}</p></section><section><h4>Outcome</h4><p>{item.outcome}</p></section></div><div className="work-scope" aria-label={`${item.title} services`}><span>Scope</span><div>{item.services.map((service) => <b key={service}>{service}</b>)}</div></div></div></article>)}</section>
+    <section className="section shell work-list">{cases.map((item, index) => <article className="work-detail" id={item.id} key={item.id}><div className="work-number">0{index + 1}</div><div className={`work-photo ${item.imageClass ?? ""}`}><img src={assetPath(item.image)} alt={item.title} loading="lazy" decoding="async" /><strong>{item.proof}</strong></div><div className="work-copy"><p className="eyebrow">{item.tag}</p><h2>{item.title}</h2><p className="work-summary">{item.summary}</p><div className="work-story"><section><h4>Context</h4><p>{item.context}</p></section><section><h4>Our work</h4><p>{item.work}</p></section><section><h4>Outcome</h4><p>{item.outcome}</p></section></div><div className="work-scope" aria-label={`${item.title} services`}><span>Scope</span><div>{item.services.map((service) => <b key={service}>{service}</b>)}</div></div></div></article>)}</section>
     <section className="section section-sand campaign-portfolio" id="campaign-portfolio">
       <div className="shell">
         <div className="section-heading campaign-portfolio-heading">
           <div><p className="eyebrow">Campaign portfolio</p><h2>Campaigns across sectors and channels.</h2></div>
-          <p>Additional projects from the Next Level archive, matched to the original campaign records and photographs.</p>
+          <p>Product campaigns, school events, partnerships, and international team travel from our archive.</p>
         </div>
         <CampaignPortfolio />
       </div>

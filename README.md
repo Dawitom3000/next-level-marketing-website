@@ -12,6 +12,7 @@ The site presents more than 20 years of company experience, detailed project sto
 - Cover Flow–inspired campaign photography gallery
 - Responsive layouts for desktop, tablet, and mobile
 - Accessible navigation, reduced-motion support, and social links
+- Contact form delivery to nextlevelmarketingcomm@gmail.com
 
 ## Local development
 
@@ -43,14 +44,16 @@ npm run build
 - `/api/health` provides a no-cache availability check.
 - `robots.txt`, `sitemap.xml`, organization structured data, and social metadata support search and link previews.
 - Custom not-found and recovery pages keep failures inside the branded experience.
-- Production dependencies are checked with `npm audit --omit=dev`.
+
+### Contact options
+
+The Contact page offers Email, Phone, and WhatsApp. Email opens a draft addressed to `nextlevelmarketingcomm@gmail.com` in the visitor's configured email app or web-mail handler; the visitor sends it from there. The website does not collect or deliver messages through a form service.
 
 ## Before the final domain launch
 
 - Set `NEXT_PUBLIC_SITE_URL` to the final public domain before building.
 - Connect the final domain and verify its HTTPS certificate.
-- Decide whether project enquiries remain email-based or move to a personal-data system hosted in an approved location.
-- If a form is introduced, approve the privacy notice, retention period, team access, and notification workflow before collecting submissions.
+- Try the Email contact option on desktop and mobile to confirm the visitor's email app or web-mail handler opens with the recipient prefilled.
 - Add analytics only after choosing a provider and approving the consent approach.
 - Recheck every phone number, email address, social link, case-study claim, logo, and image permission.
 

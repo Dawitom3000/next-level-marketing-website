@@ -16,6 +16,7 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  alternates: { canonical: siteUrl },
   title: {
     default: siteName,
     template: "%s | Next Level Marketing",
@@ -36,13 +37,13 @@ export const metadata: Metadata = {
     locale: "en_ET",
     url: siteUrl,
     siteName,
-    images: [{ url: assetPath("/og.png"), width: 1735, height: 907, alt: siteName }],
+    images: [{ url: assetPath("/og.jpg"), width: 1735, height: 907, alt: siteName }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Next Level Marketing & Communications",
     description: "More than 20 years of market experience in Ethiopia.",
-    images: [assetPath("/og.png")],
+    images: [assetPath("/og.jpg")],
   },
 };
 
@@ -57,7 +58,7 @@ export default function RootLayout({
     name: siteName,
     url: siteUrl,
     logo: new URL(assetPath("/favicon.png"), siteUrl).toString(),
-    image: new URL(assetPath("/og.png"), siteUrl).toString(),
+    image: new URL(assetPath("/og.jpg"), siteUrl).toString(),
     description: siteDescription,
     foundingDate: "2006",
     address: {
@@ -74,6 +75,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.variable} ${manrope.variable}`}>
+        <a className="skip-link" href="#main-content">Skip to content</a>
         {children}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }} />
       </body>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { assetPath } from "../lib/asset-path";
 
 const galleryPhotos = [
@@ -35,13 +35,28 @@ const galleryPhotos = [
 
 export function CampaignGallery() {
   const railRef = useRef<HTMLDivElement>(null);
+  const [canMove, setCanMove] = useState({ previous: false, next: true });
+
+  useEffect(() => {
+    const rail = railRef.current;
+    if (!rail) return;
+    function updateControls() {
+      if (!rail) return;
+      setCanMove({ previous: rail.scrollLeft > 2, next: rail.scrollLeft < rail.scrollWidth - rail.clientWidth - 2 });
+    }
+    const observer = new ResizeObserver(updateControls);
+    observer.observe(rail);
+    rail.addEventListener("scroll", updateControls, { passive: true });
+    updateControls();
+    return () => { observer.disconnect(); rail.removeEventListener("scroll", updateControls); };
+  }, []);
 
   function move(direction: number) {
     const rail = railRef.current;
     if (!rail) return;
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     rail.scrollBy({
-      left: direction * Math.min(rail.clientWidth * 0.82, 920),
+      left: direction * ((rail.firstElementChild?.getBoundingClientRect().width ?? rail.clientWidth) + parseFloat(getComputedStyle(rail).columnGap)),
       behavior: reduceMotion ? "auto" : "smooth",
     });
   }
@@ -49,16 +64,17 @@ export function CampaignGallery() {
   return (
     <div className="campaign-gallery">
       <div className="gallery-controls">
-        <span>Swipe or use the controls</span>
         <div>
-          <button type="button" onClick={() => move(-1)} aria-label="View previous photographs">←</button>
-          <button type="button" onClick={() => move(1)} aria-label="View next photographs">→</button>
+          <button type="button" onClick={() => move(-1)} disabled={!canMove.previous} aria-label="View previous photographs">←</button>
+          <button type="button" onClick={() => move(1)} disabled={!canMove.next} aria-label="View next photographs">→</button>
         </div>
       </div>
-      <div className="gallery-rail" ref={railRef} tabIndex={0} aria-label="Next Level campaign and production photographs">
+      <div className="gallery-rail" ref={railRef} tabIndex={0} role="region" aria-label="Next Level campaign and production photographs" onKeyDown={(event) => {
+        if (event.key === "ArrowLeft" || event.key === "ArrowRight") { event.preventDefault(); move(event.key === "ArrowLeft" ? -1 : 1); }
+      }}>
         {galleryPhotos.map((photo, index) => {
           return <figure className="gallery-slide" key={photo.src}>
-            <div className="gallery-image"><img src={assetPath(photo.src)} alt={photo.alt} loading={index < 2 ? "eager" : "lazy"} fetchPriority={index === 0 ? "high" : "auto"} /></div>
+            <div className="gallery-image"><img src={assetPath(photo.src)} alt={photo.alt} loading="lazy" decoding="async" /></div>
             <figcaption><span>{String(index + 1).padStart(2, "0")} / {String(galleryPhotos.length).padStart(2, "0")}</span><strong>{photo.label}</strong></figcaption>
           </figure>;
         })}

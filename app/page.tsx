@@ -13,7 +13,7 @@ export default function Home() {
       <main id="main-content" tabIndex={-1}>
         <section className="hero hero-video section-dark">
           <HeroVideo />
-          <div className="hero-grid shell">
+          <div className="hero-grid hero-home-grid shell">
             <div className="hero-copy reveal">
               <p className="eyebrow light">Addis Ababa · Ethiopia · Since 2006</p>
               <h1>We move brands <em>through culture.</em></h1>
@@ -24,13 +24,6 @@ export default function Home() {
                 <Link className="button button-primary" href="/work">Explore our work <span aria-hidden="true">↗</span></Link>
                 <Link className="button button-ghost" href="/contact">Start a project</Link>
               </div>
-            </div>
-
-            <div className="hero-side reveal delay-1">
-              <span className="hero-side-kicker">20+ years in market</span>
-              <p>Local intelligence with international ambition, proven through campaigns, partnerships, productions, events, and distribution.</p>
-              <div className="hero-disciplines"><span>Strategy</span><span>Communications</span><span>Activation</span><span>Distribution</span></div>
-              <small>Footage from the Next Level archive</small>
             </div>
           </div>
           <div className="marquee logo-marquee">
